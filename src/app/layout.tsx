@@ -29,7 +29,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <script
+          async
+          src="https://umami-db-liard.vercel.app/script.js"
+          data-website-id="a03fe882-c537-4d64-95f0-45c14e5be03d"
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased relative",
