@@ -3,6 +3,7 @@ import CTAMobile from "@/components/ui/cta-mobile";
 import Footer from "@/components/ui/footer";
 import Nav from "@/components/ui/nav";
 import { Toaster } from "@/components/ui/toaster";
+import UmamiSetup from "@/components/umami-setup";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { GeistMono } from "geist/font/mono";
@@ -43,6 +44,7 @@ export default function RootLayout({
           GeistMono.variable,
         )}
       >
+        <UmamiSetup />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

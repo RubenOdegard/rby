@@ -13,3 +13,5 @@
 $ docker build -t dev-port-docker .
 $ docker run -p 3000:3000 dev-port-docker
 ```
+
+Analytics: [Umami](https://umami.is/)
