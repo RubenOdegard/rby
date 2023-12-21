@@ -1,0 +1,34 @@
+interface LinkedInIconProps {
+  height?: number | string;
+  width?: number | string;
+  color?: string;
+}
+
+export default function LinkedInIcon(
+  { height = 24, width = 24, color = "var(--foreground)" }: LinkedInIconProps,
+) {
+  return (
+    <svg
+      className="fill-black dark:fill-white"
+      fill="none"
+      height={height}
+      shapeRendering="geometricPrecision"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.5"
+      viewBox="0 0 24 24"
+      width={width}
+      style={{ color: `${color}`, width: `${width}px`, height: `${height}px` }}
+    >
+      <title className="sr-only">LinkedIn Icon</title>
+      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+      <path d="M2 9h4v12H2z" />
+      <circle
+        cx="4"
+        cy="4"
+        r="2"
+      />
+    </svg>
+  );
+}

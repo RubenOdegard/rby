@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* h1 */
+h1 {
+  font-size: 2.25rem; /* text-4xl in Tailwind */
+  font-weight: 800; /* font-extrabold in Tailwind */
+  letter-spacing: -0.025em; /* tracking-tight in Tailwind */
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5rem; /* lg:text-5xl in Tailwind */
+  }
+}
+
+/* p */
+p {
+  line-height: 1.75; /* leading-7 in Tailwind */
+  margin-top: 1.5rem; /* [&:not(:first-child)]:mt-6 in Tailwind */
+}
+
+/* h2 */
+h2 {
+  margin-top: 2.5rem; /* mt-10 in Tailwind */
+  font-weight: 600; /* font-semibold in Tailwind */
+  border-bottom: 1px solid #e2e8f0; /* border-b pb-2 in Tailwind */
+  padding-bottom: 0.5rem;
+}
+
+/* a */
+a {
+  font-weight: 500; /* font-medium in Tailwind */
+  color: var(--accent); /* text-primary in Tailwind */
+  text-decoration: underline;
+  text-decoration-thickness: 0.125em; /* underline-offset-4 in Tailwind */
+}
+
+/* blockquote */
+blockquote {
+  margin-top: 1.5rem;
+  border-left: 2px solid #e2e8f0; /* border-l-2 in Tailwind */
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+
+/* h3 */
+h3 {
+  margin-top: 2rem; /* mt-8 in Tailwind */
+  font-weight: 600; /* font-semibold in Tailwind */
+  letter-spacing: -0.025em; /* tracking-tight in Tailwind */
+}
+
+/* ul */
+ul {
+  margin-top: 1.5rem; /* my-6 in Tailwind */
+  margin-left: 0.7rem; /* ml-6 in Tailwind */
+  list-style: disc; /* list-disc in Tailwind */
+}
+
+/* li */
+li {
+  margin-top: 0.5rem; /* [&>li]:mt-2 in Tailwind */
+}
+
+/* div with class "w-full overflow-y-auto" */
+.w-full.overflow-y-auto {
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* table with its children */
+table {
+  width: 100%;
+}
+
+/* th */
+th {
+  font-weight: 700; /* font-bold in Tailwind */
+  border: 1px solid var(--muted-foreground); /* border px-4 py-2 in Tailwind */
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+/* td */
+td {
+  border: 1px solid var(--muted-foreground); /* border px-4 py-2 in Tailwind */
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+/* Optional table alignment classes */
+th[align="center"],
+td[align="center"] {
+  text-align: center;
+}
+
+th[align="right"],
+td[align="right"] {
+  text-align: right;
+}
+
+/* last paragraph */
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* custom styles */
