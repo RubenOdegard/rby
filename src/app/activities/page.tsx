@@ -53,11 +53,6 @@ const getActivityStatusClass = (startDate: string, endDate: string) => {
   }
 };
 
-{
-  /* TODO: Add a modal for each table row, displays more information and links about the different activities. */
-  // TODO: Add link on each row to the relevant course/activity
-}
-
 export default function Activities() {
   return (
     <main className="flex min-h-screen flex-col px-4 overflow-x-hidden ">
@@ -83,7 +78,7 @@ export default function Activities() {
                 className="flex flex-row items-center"
               >
                 <Button
-                  aria-label="go to certiications page"
+                  aria-label="check out the certifications page"
                   variant="outline"
                   size="sm"
                   className="font-semibold ml-1.5"
@@ -99,6 +94,9 @@ export default function Activities() {
                 <TableHeader>
                   <TableRow>
                     <TableHead>Status</TableHead>
+                    <TableHead className="hidden sm:table-cell">
+                      Link
+                    </TableHead>
                     <TableHead>Title</TableHead>
                     <TableHead className="hidden md:table-cell">
                       Author
@@ -132,6 +130,27 @@ export default function Activities() {
                           : "TBD"}
                       </TableCell>
 
+                      <TableCell className="hidden sm:table-cell">
+                        {certification.link
+                          ? (
+                            <Link
+                              href={certification.link}
+                              target="_blank"
+                              aria-label="certification link"
+                            >
+                              <LinkIcon
+                                size={14}
+                                className="text-foreground"
+                              />
+                            </Link>
+                          )
+                          : (
+                            <LinkIcon
+                              size={14}
+                              className="text-foreground/50"
+                            />
+                          )}
+                      </TableCell>
                       <TableCell>{certification.title}</TableCell>
                       <TableCell className="hidden md:table-cell">
                         {certification.place}

@@ -30,7 +30,7 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
           size="sm"
           className="text-xs md:text-sm"
         >
-          <span className="hidden md:inline">Show more</span>
+          <span className="hidden md:inline">Open</span>
           <span className="md:hidden">
             <PictureInPicture size={16} />
           </span>
@@ -61,7 +61,7 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
             <div className="col-span-6 lg:col-span-3 order-first lg:order-last w-full relative">
               <Image
                 src={data.image}
-                alt="thumbnail"
+                alt={data.imagealt}
                 height={1920}
                 width={1080}
                 layout=""
@@ -115,10 +115,9 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
                       <div className="text-muted-foreground gap-4 flex relative w-full mt-6 ">
                         {/* background blur for image, can be made into component because it's used multiple times over the project */}
                         <div className="inset-0 hidden dark:inline-block absolute bg-blue-950/20 blur-3xl -z-10" />
-                        {/* TODO: render alt from project config */}
                         <Image
                           src={content.image}
-                          alt="project image"
+                          alt={content.imagealt}
                           width={1920}
                           height={1080}
                           layout="responsive"
@@ -164,10 +163,9 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
                         {/* background blur for image, can be made into component because it's used multiple times over the project */}
                         <div className="inset-0 hidden dark:inline-block absolute bg-blue-950/20 blur-3xl -z-10" />
 
-                        {/* TODO: render alt from project config */}
                         <Image
                           src={content.image}
-                          alt="project image"
+                          alt={content.imagealt}
                           width={1920}
                           height={1080}
                           layout="responsive"

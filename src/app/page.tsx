@@ -7,9 +7,7 @@ import ShowProjects from "@/components/show-projects";
 import { cn } from "@/lib/utils";
 
 // TODO: Projectgallery on main page needs to get info from config file. Add featured flag to projects
-// TODO: Add clickable links to Certifications
-// TODO: Add clickable links to Activities
-// TODO: Add "featured" badge on project page (need to change types and json data as well)
+// TODO: Fix every link in the config file for activities and ceritfications
 
 export default function Home() {
   const sectionClasses = "w-full prose dark:prose-invert lg:prose-lg";

@@ -43,11 +43,12 @@ export default function Projects() {
                   for snippets and snacks.
                 </p>
 
+                {/* conditionally render "show more" or a icon based on viewport. */}
                 <p className="text-sm pt-0 mt-4 md:mt-2">
                   Click
                   <span className="hidden md:inline font-semibold">
                     {" "}
-                    Show more{" "}
+                    Open{" "}
                   </span>
                   <span className="md:hidden inline-block px-2">
                     <PictureInPicture size={16} />

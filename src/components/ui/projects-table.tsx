@@ -12,6 +12,7 @@ import { Badge } from "./badge";
 import ShowProjectDetails from "./show-project-details-dialog";
 import LivePreviewButton from "./live-preview-button";
 import GithubLinkButton from "./github-link-button";
+import FeaturedBadge from "./featured-badge";
 
 const ProjectsTable = () => {
   return (
@@ -21,7 +22,7 @@ const ProjectsTable = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Details</TableHead>
+              <TableHead>Read more</TableHead>
               <TableHead>Title</TableHead>
               <TableHead className="hidden md:table-cell">Desc</TableHead>
               <TableHead>Source</TableHead>
@@ -37,10 +38,13 @@ const ProjectsTable = () => {
                 return (
                   <TableRow key={project.title}>
                     <TableCell>
-                      {/* Open modal with project details */}
+                      {/* open modal with project details */}
                       <ShowProjectDetails data={project} />
                     </TableCell>
-                    <TableCell className="text-xs sm:text-sm">
+                    <TableCell className="text-xs sm:text-sm relative">
+                      {/* rendering a badge on the featured projects from the home page */}
+                      {project.featured && <FeaturedBadge />}
+
                       {project.title}
                     </TableCell>
                     <TableCell className="hidden md:table-cell">

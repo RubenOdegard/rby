@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import LivePreviewButton from "./live-preview-button";
 import GithubLinkButton from "./github-link-button";
@@ -15,8 +14,6 @@ const projects = [
     live: "",
   },
 ];
-
-// TODO: Change project data to come from site config.
 
 const ProjectGallery = () => {
   return (

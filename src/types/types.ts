@@ -6,6 +6,7 @@ export type TProject = {
   hidden: boolean;
   featured: boolean;
   image: string;
+  imagealt: string;
   live: string;
   link: string;
   tags: string[];
@@ -22,9 +23,10 @@ export type TProject = {
     };
     tags: string[];
     contentSection: {
-      title: string; // Added title property
+      title: string;
       text: string[];
       image: string;
+      imagealt: string;
     }[];
   };
 };

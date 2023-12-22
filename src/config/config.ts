@@ -109,7 +109,7 @@ export const certifications = [
     status: 1,
     expandable: 1,
     school: 0,
-    link: "https://pll.harvard.edu/course/cs50-introduction-computer-science",
+    link: "",
     certification: "",
     place: "OsloMet",
     type: "Campus",
@@ -343,6 +343,7 @@ export const projects = [
     hidden: false,
     featured: true,
     image: "/images/p1/hero.jpg",
+    imagealt: "hero image",
     link: "https://github.com/RubenOdegard/cs50-final-project",
     live: "https://cs50-final-project-umber.vercel.app/",
     tags: ["NextJS", "Typescript", "TailwindCSS"],
@@ -382,6 +383,7 @@ export const projects = [
             "A page for a collection of projects worth showcasing. Github and live preview links and tags. Expandable for more detailed information.",
           ],
           image: "/images/p1/project-page.jpg",
+          imagealt: "project page",
         },
         {
           title: "Activities",
@@ -390,6 +392,7 @@ export const projects = [
           ],
 
           image: "/images/p1/activity-page.jpg",
+          imagealt: "activity page",
         },
         {
           title: "Certifications",
@@ -398,6 +401,7 @@ export const projects = [
           ],
 
           image: "/images/p1/certification-page.jpg",
+          imagealt: "certifiation page",
         },
       ],
     },
