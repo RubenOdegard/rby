@@ -1,9 +1,9 @@
 import { certifications, certificationsShowMax } from "@/config/config";
-import CertificationCard from "./ui/certification-card";
+import CertificationCard from "@/components/certification-card";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-const ShowCertifications = () => {
+const ModuleCertifications = () => {
   return (
     <article className="space-y-4 md:space-y-6">
       <h2 className="text-lg md:text-xl lg:text-2xl">Certifications</h2>
@@ -78,4 +78,4 @@ const ShowCertifications = () => {
   );
 };
 
-export default ShowCertifications;
+export default ModuleCertifications;

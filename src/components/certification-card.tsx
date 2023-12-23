@@ -6,11 +6,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./accordion";
+} from "@/components/ui/accordion";
 import Link from "next/link";
-import { Badge } from "./badge";
+import { Badge } from "@/components/ui/badge";
 import { TCertification } from "@/types/types";
-import Card from "@/components/ui/card";
+import Card from "@/components/ui/container-card";
 
 export default function CertificationCard(
   certification: TCertification,

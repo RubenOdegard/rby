@@ -11,8 +11,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CopyIcon } from "@radix-ui/react-icons";
-import { Button } from "./button";
-import MailIcon from "./svg/mail-icon";
+import { Button } from "./ui/button";
+import MailIcon from "./ui/svg/mail-icon";
 import { useToast } from "@/components/ui/use-toast";
 
 type TDialog = {
@@ -20,7 +20,7 @@ type TDialog = {
   width: number;
 };
 
-export default function ContactDialog({ height, width }: TDialog) {
+export default function ModalContactMe({ height, width }: TDialog) {
   const { toast } = useToast();
   const copyToClipboard = async () => {
     try {
@@ -64,11 +64,7 @@ export default function ContactDialog({ height, width }: TDialog) {
             <Label htmlFor="link" className="sr-only">
               Link
             </Label>
-            <Input
-              id="link"
-              defaultValue="me@rubenodegard.com"
-              readOnly
-            />
+            <Input id="link" defaultValue="me@rubenodegard.com" readOnly />
           </div>
           <Button
             aria-label="copy text from input"

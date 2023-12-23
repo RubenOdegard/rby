@@ -1,5 +1,5 @@
 "use client";
-import ContactDialog from "./contact-dialog";
+import ContactDialog from "../modal-contact-me";
 
 export default function CTAMobile() {
   return (

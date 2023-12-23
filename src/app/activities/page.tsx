@@ -1,5 +1,5 @@
-import RenderBackgroundColors from "@/components/render-background-colors";
-import PageTitleAndReturnLink from "@/components/ui/back-to-home-link";
+import ModuleBackgroundColors from "@/components/module-background-colors";
+import PageTitleAndReturnLink from "@/components/link-return-home";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -56,7 +56,7 @@ const getActivityStatusClass = (startDate: string, endDate: string) => {
 export default function Activities() {
   return (
     <main className="flex min-h-screen flex-col px-4 overflow-x-hidden ">
-      <RenderBackgroundColors />
+      <ModuleBackgroundColors />
       <div className="flex justify-center space-y-16 md:space-y-24 pb-10">
         <section className="w-full max-w-4xl prose dark:prose-invert lg:prose-lg flex min-h-[70dvh] pt-6 z-10">
           <div className="flex w-full flex-col">
@@ -94,9 +94,7 @@ export default function Activities() {
                 <TableHeader>
                   <TableRow>
                     <TableHead>Status</TableHead>
-                    <TableHead className="hidden sm:table-cell">
-                      Link
-                    </TableHead>
+                    <TableHead className="hidden sm:table-cell">Link</TableHead>
                     <TableHead>Title</TableHead>
                     <TableHead className="hidden md:table-cell">
                       Author
@@ -109,47 +107,35 @@ export default function Activities() {
                   {certifications.map((certification: TCertification) => (
                     <TableRow
                       key={certification.title}
-                      className={`text-xs md:text-sm ${
-                        getActivityStatusClass(
-                          certification.startDate,
-                          certification.endDate,
-                        )
-                      }`}
+                      className={`text-xs md:text-sm ${getActivityStatusClass(
+                        certification.startDate,
+                        certification.endDate
+                      )}`}
                     >
-                      <TableCell
-                        className={"capitalize"}
-                      >
+                      <TableCell className={"capitalize"}>
                         {getActivityStatusText(
-                            certification.startDate,
-                            certification.endDate,
-                          ) !== null
+                          certification.startDate,
+                          certification.endDate
+                        ) !== null
                           ? getActivityStatusText(
-                            certification.startDate,
-                            certification.endDate,
-                          )
+                              certification.startDate,
+                              certification.endDate
+                            )
                           : "TBD"}
                       </TableCell>
 
                       <TableCell className="hidden sm:table-cell">
-                        {certification.link
-                          ? (
-                            <Link
-                              href={certification.link}
-                              target="_blank"
-                              aria-label="certification link"
-                            >
-                              <LinkIcon
-                                size={14}
-                                className="text-foreground"
-                              />
-                            </Link>
-                          )
-                          : (
-                            <LinkIcon
-                              size={14}
-                              className="text-foreground/50"
-                            />
-                          )}
+                        {certification.link ? (
+                          <Link
+                            href={certification.link}
+                            target="_blank"
+                            aria-label="certification link"
+                          >
+                            <LinkIcon size={14} className="text-foreground" />
+                          </Link>
+                        ) : (
+                          <LinkIcon size={14} className="text-foreground/50" />
+                        )}
                       </TableCell>
                       <TableCell>{certification.title}</TableCell>
                       <TableCell className="hidden md:table-cell">
@@ -160,14 +146,12 @@ export default function Activities() {
                       </TableCell>
                       <TableCell className="hidden md:table-cell">
                         {getActivityStatusText(
-                            certification.startDate,
-                            certification.endDate,
-                          ) !== null
-                          ? `${
-                            formatMonthYear(
-                              certification.startDate,
-                            )
-                          } - ${formatMonthYear(certification.endDate)}`
+                          certification.startDate,
+                          certification.endDate
+                        ) !== null
+                          ? `${formatMonthYear(
+                              certification.startDate
+                            )} - ${formatMonthYear(certification.endDate)}`
                           : ""}
                       </TableCell>
                     </TableRow>

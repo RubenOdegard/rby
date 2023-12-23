@@ -8,16 +8,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import { ReactNode } from "react";
 
-type TFeatureDisabledDialog = {
+type TModalFeatureDisabled = {
   children: ReactNode;
 };
 
-export default function FeatureDisabledDialog(
-  { children }: TFeatureDisabledDialog,
-) {
+export default function ModalFeatureDisabled({
+  children,
+}: TModalFeatureDisabled) {
   return (
     <Dialog>
       <DialogTrigger asChild>

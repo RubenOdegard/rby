@@ -1,7 +1,7 @@
 import React from "react";
-import ToolsShowcase from "./ui/tools-showcase";
+import ShowcaseTools from "@/components/showcase-tools";
 
-const ShowInformation = () => {
+const ModuleInformation = () => {
   return (
     <article className="col-span-4 ">
       <h2 className="text-lg md:text-xl lg:text-2xl">Me, myself and I</h2>
@@ -23,7 +23,7 @@ const ShowInformation = () => {
         problem-solving.
       </p>
       <div className="flex justify-center w-full relative">
-        <ToolsShowcase />
+        <ShowcaseTools />
       </div>
       <p className="text-muted-foreground">
         <b>
@@ -43,4 +43,4 @@ const ShowInformation = () => {
   );
 };
 
-export default ShowInformation;
+export default ModuleInformation;

@@ -1,5 +1,5 @@
-import ShowBackgroundHero from "@/components/show-background-hero";
-import PageTitleAndReturnLink from "@/components/ui/back-to-home-link";
+import ShowBackgroundHero from "@/components/module-background-hero";
+import PageTitleAndReturnLink from "@/components/link-return-home";
 
 export default function NotFound() {
   return (

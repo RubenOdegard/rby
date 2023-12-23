@@ -6,14 +6,14 @@ import JavascriptIcon from "@/components/ui/svg/javascript-icon";
 import ReactjsIcon from "@/components/ui/svg/reactjs-icon";
 import NextjsIcon from "@/components/ui/svg/nextjs-icon";
 import PythonIcon from "@/components/ui/svg/python-icon";
-import PlanetscaleIcon from "./svg/planetscale-icon";
-import MongoDBIcon from "./svg/mongodb-icon";
-import MySQLIcon from "./svg/mysql-icon";
-import GitIcon from "./svg/git-icon";
-import GithubIcon from "./svg/github-icon";
-import DockerIcon from "./svg/docker-icon";
-import PostgresIcon from "./svg/postgresql-icon";
-import MarkdownIcon from "./svg/markdown-icon";
+import PlanetscaleIcon from "@/components/ui/svg/planetscale-icon";
+import MongoDBIcon from "@/components/ui/svg/mongodb-icon";
+import MySQLIcon from "@/components/ui/svg/mysql-icon";
+import GitIcon from "@/components/ui/svg/git-icon";
+import GithubIcon from "@/components/ui/svg/github-icon";
+import DockerIcon from "@/components/ui/svg/docker-icon";
+import PostgresIcon from "@/components/ui/svg/postgresql-icon";
+import MarkdownIcon from "@/components/ui/svg/markdown-icon";
 
 const boxStyling =
   "flex items-center fill-foreground justify-center hover:border-ring/10 hover:bg-card/10 transition duration-250 border-secondary/80 border aspect-square bg-secondary/50 rounded-md overflow-hidden p-2 hover:scale-105 hover:shadow-sm hover:shadow-ring/10";
@@ -86,7 +86,7 @@ const showcaseItems = [
   },
 ];
 
-export default function ToolsShowcase() {
+export default function ShowcaseTools() {
   return (
     <div className="relative z-40 mb-6 mt-12 ">
       <div className="border p-1.5 rounded-lg zoom grid grid-cols-4 sm:grid-cols-8 md:grid-cols-8 max-w-md gap-1 w-1/1">

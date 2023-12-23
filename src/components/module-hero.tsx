@@ -1,8 +1,8 @@
 import { siteOptions } from "@/config/config";
 import React from "react";
-import AvailableForWork from "./ui/available-for-work";
+import AvailableForWork from "./available-for-work";
 
-const ShowPageHero = () => {
+const ModuleHero = () => {
   return (
     <div className="relative">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold lg:-ml-1 leading-tight">
@@ -21,4 +21,4 @@ const ShowPageHero = () => {
   );
 };
 
-export default ShowPageHero;
+export default ModuleHero;

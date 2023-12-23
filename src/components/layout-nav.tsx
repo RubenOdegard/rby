@@ -1,18 +1,18 @@
 "use client";
 
-import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from "@/components/ui/button";
+import ContactDialog from "@/components/modal-contact-me";
+import HorizontalDivider from "@/components/ui/h-divider";
+import { ToggleTheme } from "@/components/toggle-theme";
+import NavLink from "@/components/ui/nav-link";
+import NavLinkLogo from "@/components/ui/nav-link-logo";
 import { navLinks } from "@/config/config";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { XIcon } from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { Button } from "./button";
-import ContactDialog from "./contact-dialog";
-import HorizontalDivider from "./h-divider";
-import NavLink from "./nav-link";
-import NavLinkLogo from "./nav-link-logo";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
-const Nav = () => {
+const LayoutNav = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
@@ -60,9 +60,7 @@ const Nav = () => {
               width={scrollPosition > 0 ? 24 : 36}
               priority
             />
-            <span className="text-sm ml-2">
-              RBY
-            </span>
+            <span className="text-sm ml-2">RBY</span>
           </NavLinkLogo>
         </span>
 
@@ -82,7 +80,7 @@ const Nav = () => {
             <HorizontalDivider />
           </li>
           <li className="m-0 flex items-center ">
-            <ModeToggle />
+            <ToggleTheme />
           </li>
           <li className="m-0">
             <ContactDialog
@@ -131,7 +129,7 @@ const Nav = () => {
                     </NavLink>
                     <div className="gap-x-2">
                       <ContactDialog height={16} width={16} />
-                      <ModeToggle />
+                      <ToggleTheme />
                     </div>
                   </div>
                 </li>
@@ -145,8 +143,7 @@ const Nav = () => {
                     </NavLink>
                   </li>
                 ))}
-                <li className="m-0">
-                </li>
+                <li className="m-0"></li>
               </ul>
             </div>
           </nav>
@@ -156,4 +153,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default LayoutNav;

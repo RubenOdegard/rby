@@ -6,7 +6,7 @@ import {
   CalendarHeart,
   MapPin,
 } from "lucide-react";
-import Card from "./card";
+import Card from "@/components/ui/container-card";
 import { TActivity } from "@/types/types";
 
 const getIconType = (startDate: string, endDate: string) => {

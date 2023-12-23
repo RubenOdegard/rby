@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const ShowBackgroundHero = () => {
+const ModuleBackgroundHero = () => {
   return (
     <>
       {/* Rendering gradient background - top right side */}
@@ -24,4 +24,4 @@ const ShowBackgroundHero = () => {
   );
 };
 
-export default ShowBackgroundHero;
+export default ModuleBackgroundHero;

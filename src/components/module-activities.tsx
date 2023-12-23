@@ -1,9 +1,9 @@
 import { activity } from "@/config/config";
-import ActivityCard from "./ui/activity-card";
+import ActivityCard from "@/components/activity-card";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-const ShowActivities = () => {
+const ModuleActivities = () => {
   return (
     <article className="space-y-4 md:space-y-6 ">
       <h2 className="text-lg md:text-xl lg:text-2xl">
@@ -56,4 +56,4 @@ const ShowActivities = () => {
   );
 };
 
-export default ShowActivities;
+export default ModuleActivities;

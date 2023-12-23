@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-const UmamiSetup = () => {
+const AnalyticsUmamiSetup = () => {
   useEffect(() => {
     // Check if the page is running on localhost
     if (
@@ -18,4 +18,4 @@ const UmamiSetup = () => {
   return null;
 };
 
-export default UmamiSetup;
+export default AnalyticsUmamiSetup;

@@ -1,4 +1,4 @@
-const RenderBackgroundColors = () => {
+const ModuleBackgroundColors = () => {
   return (
     <div className="relative inset-0">
       <div className="absolute top-0 right-0 h-[500px] w-[500px] lg:h-[700px] lg:w-[1000px] blur-3xl bg-gradient-to-bl from-blue-900/30 via-blue-900/10 to-background" />
@@ -7,4 +7,4 @@ const RenderBackgroundColors = () => {
   );
 };
 
-export default RenderBackgroundColors;
+export default ModuleBackgroundColors;

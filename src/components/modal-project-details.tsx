@@ -10,17 +10,19 @@ import {
 } from "@/components/ui/dialog";
 import { TProject } from "@/types/types";
 import Image from "next/image";
-import { Badge } from "./badge";
-import { Button } from "./button";
-import GithubLinkButton from "./github-link-button";
-import LivePreviewButton from "./live-preview-button";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import GithubLinkButton from "./ui/github-link-button";
+import LivePreviewButton from "./ui/live-preview-button";
 import { PictureInPicture } from "lucide-react";
 
-interface ShowProjectDetailsProps {
+interface ModalProjectDetailsProps {
   data: TProject;
 }
 
-export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
+export default function ModalProjectDetails({
+  data,
+}: ModalProjectDetailsProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -49,7 +51,7 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
                 </p>
                 <p className="mt-3">
                   {data.showcase.desc.map((desc, index) => {
-                    return <span key={`desc-${index}`}>{desc}{" "}</span>;
+                    return <span key={`desc-${index}`}>{desc} </span>;
                   })}
                 </p>
                 <div className="flex gap-1.5 mt-4">
@@ -77,7 +79,7 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
             <h3>{data.showcase.mainSection.title}</h3>
             <p className="text-muted-foreground text-sm md:text-base">
               {data.showcase.mainSection.text.map((content, index) => {
-                return <span key={`mainSection-${index}`}>{content}{" "}</span>;
+                return <span key={`mainSection-${index}`}>{content} </span>;
               })}
             </p>
           </div>
@@ -95,20 +97,21 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
           <p className="text-muted-foreground text-sm md:text-base ml-[8px]">
             {data.showcase.longSection.text
               ? data.showcase.longSection.text.map((text, index) => (
-                <span key={`longSection-${index}`}>{text}{" "}</span>
-              ))
+                  <span key={`longSection-${index}`}>{text} </span>
+                ))
               : null}
           </p>
         </div>
 
         {data.showcase.contentSection
           ? data.showcase.contentSection.map((content, index) => (
-            <div
-              key={`contentSection-${index}`}
-              className={"grid grid-cols-6 place-items-center gap-x-8 px-0 md:px-8 "}
-            >
-              {index % 2 === 0
-                ? (
+              <div
+                key={`contentSection-${index}`}
+                className={
+                  "grid grid-cols-6 place-items-center gap-x-8 px-0 md:px-8 "
+                }
+              >
+                {index % 2 === 0 ? (
                   <>
                     {/* Image on the left */}
                     <div className="flex flex-col space-x-2 col-span-6 lg:col-span-3 text-left">
@@ -140,8 +143,7 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
                       </p>
                     </div>
                   </>
-                )
-                : (
+                ) : (
                   // reverse order for odd value
                   <>
                     {/* Text on the left */}
@@ -176,8 +178,8 @@ export default function ShowProjectDetails({ data }: ShowProjectDetailsProps) {
                     </div>
                   </>
                 )}
-            </div>
-          ))
+              </div>
+            ))
           : null}
 
         <DialogFooter className="sm:justify-start col-span-6">
