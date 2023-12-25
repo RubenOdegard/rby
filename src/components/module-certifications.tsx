@@ -64,6 +64,7 @@ const ModuleCertifications = () => {
             <Link href="/certifications">
               <Button
                 aria-label="show all certifications"
+                data-umami-event="main-certifications-go-to-all-certifications"
                 key="showAllCertificationsButton"
                 className="text-xs sm:text-sm"
               >

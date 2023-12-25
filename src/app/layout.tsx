@@ -1,7 +1,7 @@
 import AnalyticsUmamiSetup from "@/components/analytics-umami-setup";
 import LayoutNav from "@/components/layout-nav";
 import { ThemeProvider } from "@/components/theme-provider";
-import CTAMobile from "@/components/ui/cta-mobile";
+import CTAMobile from "@/components/modal-contact-me-mobile";
 import LayoutFooter from "@/components/layout-footer";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,7 @@ import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cs50-final-project-umber.vercel.app"),
+  metadataBase: new URL("https://rubenodegard.com"),
   openGraph: {
     images: "/opengraph-image.png",
   },

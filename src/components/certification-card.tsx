@@ -118,6 +118,7 @@ export default function CertificationCard(
                       ? (
                         <Button
                           aria-label="certification"
+                          data-umami-event="open certification" // TODO: edit this to show which certification is clicked.
                           asChild
                           size="sm"
                           variant="outline"

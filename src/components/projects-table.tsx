@@ -52,8 +52,13 @@ const ProjectsTable = () => {
                       <LivePreviewButton
                         href={project.live}
                         variant="outline"
+                        data-umami-event="projects-live-view-button"
                       />
-                      <GithubLinkButton href={project.link} variant="outline" />
+                      <GithubLinkButton
+                        href={project.link}
+                        variant="outline"
+                        data-umami-event="projects-github-button"
+                      />
                     </div>
                   </TableCell>
                   <TableCell className="hidden lg:table-cell">

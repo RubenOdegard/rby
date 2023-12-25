@@ -345,7 +345,7 @@ export const projects = [
     image: "/images/p1/hero.jpg",
     imagealt: "hero image",
     link: "https://github.com/RubenOdegard/cs50-final-project",
-    live: "https://cs50-final-project-umber.vercel.app/",
+    live: "",
     tags: ["NextJS", "Typescript", "TailwindCSS"],
     showcase: {
       introduction: [

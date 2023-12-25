@@ -64,6 +64,7 @@ export default function Activities() {
               href="/"
               title="Activities"
               text="<- Back to home"
+              data-umami-event="activities-return-link"
             />
             <h2>
               A list of activities either already complete or to be done in the
@@ -72,13 +73,14 @@ export default function Activities() {
 
             <p className="text-sm flex flex-col md:flex-row items-center gap-1">
               If you are only interested in certifications:{" "}
-              {/* Not extracted out to component yet, this may be used again later. If so i make it into its own component. */}
+              {/* TODO: Not extracted out to component yet, this may be used again later. If so i make it into its own component. */}
               <Link
                 href="/certifications"
                 className="flex flex-row items-center"
               >
                 <Button
                   aria-label="check out the certifications page"
+                  data-umami-event="activities-go-to-certifications-button"
                   variant="outline"
                   size="sm"
                   className="font-semibold ml-1.5"
@@ -107,35 +109,42 @@ export default function Activities() {
                   {certifications.map((certification: TCertification) => (
                     <TableRow
                       key={certification.title}
-                      className={`text-xs md:text-sm ${getActivityStatusClass(
-                        certification.startDate,
-                        certification.endDate
-                      )}`}
+                      className={`text-xs md:text-sm ${
+                        getActivityStatusClass(
+                          certification.startDate,
+                          certification.endDate,
+                        )
+                      }`}
                     >
                       <TableCell className={"capitalize"}>
                         {getActivityStatusText(
-                          certification.startDate,
-                          certification.endDate
-                        ) !== null
+                            certification.startDate,
+                            certification.endDate,
+                          ) !== null
                           ? getActivityStatusText(
-                              certification.startDate,
-                              certification.endDate
-                            )
+                            certification.startDate,
+                            certification.endDate,
+                          )
                           : "TBD"}
                       </TableCell>
 
                       <TableCell className="hidden sm:table-cell">
-                        {certification.link ? (
-                          <Link
-                            href={certification.link}
-                            target="_blank"
-                            aria-label="certification link"
-                          >
-                            <LinkIcon size={14} className="text-foreground" />
-                          </Link>
-                        ) : (
-                          <LinkIcon size={14} className="text-foreground/50" />
-                        )}
+                        {certification.link
+                          ? (
+                            <Link
+                              href={certification.link}
+                              target="_blank"
+                              aria-label="certification link"
+                            >
+                              <LinkIcon size={14} className="text-foreground" />
+                            </Link>
+                          )
+                          : (
+                            <LinkIcon
+                              size={14}
+                              className="text-foreground/50"
+                            />
+                          )}
                       </TableCell>
                       <TableCell>{certification.title}</TableCell>
                       <TableCell className="hidden md:table-cell">
@@ -146,12 +155,14 @@ export default function Activities() {
                       </TableCell>
                       <TableCell className="hidden md:table-cell">
                         {getActivityStatusText(
-                          certification.startDate,
-                          certification.endDate
-                        ) !== null
-                          ? `${formatMonthYear(
-                              certification.startDate
-                            )} - ${formatMonthYear(certification.endDate)}`
+                            certification.startDate,
+                            certification.endDate,
+                          ) !== null
+                          ? `${
+                            formatMonthYear(
+                              certification.startDate,
+                            )
+                          } - ${formatMonthYear(certification.endDate)}`
                           : ""}
                       </TableCell>
                     </TableRow>

@@ -25,6 +25,7 @@ export default function Projects() {
                 <PageTitleAndReturnLink
                   href="/"
                   title="Projects"
+                  data-umami-event="projects-return-link"
                   text="<- Back to home"
                 />
                 <h2>
@@ -35,6 +36,7 @@ export default function Projects() {
                   Not all projects are worth showcasing, check out my{" "}
                   <Link
                     href="https://github.com/rubenodegard"
+                    data-umami-event="projects-github-profile"
                     className="m-0 p-0 mr-[0.2rem]"
                     target="_blank"
                   >
@@ -46,7 +48,7 @@ export default function Projects() {
                 {/* conditionally render "show more" or a icon based on viewport. */}
                 <p className="text-sm pt-0 mt-4 md:mt-2">
                   Click
-                  <span className="hidden md:inline font-semibold"> Open </span>
+                  <span className="hidden md:inline font-semibold">Open</span>
                   <span className="md:hidden inline-block px-2">
                     <PictureInPicture size={16} />
                   </span>

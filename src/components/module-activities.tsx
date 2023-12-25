@@ -45,6 +45,7 @@ const ModuleActivities = () => {
         <Link href="/activities">
           <Button
             aria-label="show all planned activities"
+            data-umami-event="main-activities-go-to-all-activities"
             className="text-xs sm:text-sm"
             variant="default"
           >

@@ -16,6 +16,7 @@ const ShowProjects = () => {
         <Link href="/projects">
           <Button
             aria-label="show all projects"
+            data-umami-event="hero-show-all-projects"
             variant="outline"
             className="text-xs sm:text-sm"
           >
@@ -25,6 +26,7 @@ const ShowProjects = () => {
         <Link href="https://github.com/rubenodegard" target="_blank">
           <Button
             aria-label="go to github profile rubenodegard"
+            data-umami-event="hero-go-to-github-profile"
             variant="default"
             className="text-xs sm:text-sm "
           >

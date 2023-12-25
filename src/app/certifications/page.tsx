@@ -76,6 +76,7 @@ export default function Certifications() {
               <Link href="/activities" className="flex flex-row items-center">
                 <Button
                   aria-label="check out the activities page"
+                  data-umami-event="certifications-go-to-activities-button"
                   variant="outline"
                   size="sm"
                   className="font-semibold ml-1.5"
@@ -105,38 +106,45 @@ export default function Certifications() {
                     .map((certification: TCertification) => (
                       <TableRow
                         key={certification.title}
-                        className={`text-xs md:text-sm ${getCertificationStatusClass(
-                          certification.startDate,
-                          certification.endDate
-                        )}`}
+                        className={`text-xs md:text-sm ${
+                          getCertificationStatusClass(
+                            certification.startDate,
+                            certification.endDate,
+                          )
+                        }`}
                       >
                         <TableCell className={"capitalize"}>
                           {getCertificationStatusText(
-                            certification.startDate,
-                            certification.endDate
-                          ) !== null
+                              certification.startDate,
+                              certification.endDate,
+                            ) !== null
                             ? getCertificationStatusText(
-                                certification.startDate,
-                                certification.endDate
-                              )
+                              certification.startDate,
+                              certification.endDate,
+                            )
                             : "TBD"}
                         </TableCell>
 
                         <TableCell className="hidden sm:table-cell">
-                          {certification.link ? (
-                            <Link
-                              href={certification.link}
-                              target="_blank"
-                              aria-label="certification link"
-                            >
-                              <LinkIcon size={14} className="text-foreground" />
-                            </Link>
-                          ) : (
-                            <LinkIcon
-                              size={14}
-                              className="text-foreground/50"
-                            />
-                          )}
+                          {certification.link
+                            ? (
+                              <Link
+                                href={certification.link}
+                                target="_blank"
+                                aria-label="certification link"
+                              >
+                                <LinkIcon
+                                  size={14}
+                                  className="text-foreground"
+                                />
+                              </Link>
+                            )
+                            : (
+                              <LinkIcon
+                                size={14}
+                                className="text-foreground/50"
+                              />
+                            )}
                         </TableCell>
                         <TableCell>{certification.title}</TableCell>
                         <TableCell className="hidden md:table-cell">
@@ -147,12 +155,14 @@ export default function Certifications() {
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
                           {getCertificationStatusText(
-                            certification.startDate,
-                            certification.endDate
-                          ) !== null
-                            ? `${formatMonthYear(
-                                certification.startDate
-                              )} - ${formatMonthYear(certification.endDate)}`
+                              certification.startDate,
+                              certification.endDate,
+                            ) !== null
+                            ? `${
+                              formatMonthYear(
+                                certification.startDate,
+                              )
+                            } - ${formatMonthYear(certification.endDate)}`
                             : ""}
                         </TableCell>
                       </TableRow>
