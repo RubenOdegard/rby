@@ -15,11 +15,13 @@ export default function LayoutFooter() {
         <div className="flex flex-col gap-y-2 justify-self-center justify-center items-center order-0 md:order-1">
           <div className="relative">
             <LanguageIcon color="text-red-500" />
-            <span className="h-[24px] w-[24px] bg-white blur-xl opacity-60 absolute top-0 left-0 rounded-full z-10"></span>
+            <span className="h-[24px] w-[24px] bg-white blur-xl opacity-60 absolute top-0 left-0 rounded-full z-10">
+            </span>
           </div>
           <FeatureDisabledDialog>
             <ToggleLanguage />
           </FeatureDisabledDialog>
+          <h4 className="text-muted-foreground">me@rubenodegard.com</h4>
         </div>
         <div className="flex gap-2 order-2 md:order-2 mt-2 justify-self-center md:justify-self-end">
           <Link href="https://linkedin.com/in/rubenodegard" target="_blank">

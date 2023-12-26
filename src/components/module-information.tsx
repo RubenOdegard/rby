@@ -28,9 +28,7 @@ const ModuleInformation = () => {
       <p className="text-muted-foreground">
         <b>
           Web development is something I am deeply passionate about, and I am
-          ready to take on new challenges. Securing the first opportunity can
-          often be the most challenging, but I am hopeful for the chance to
-          prove myself.
+          ready to take on new challenges.
         </b>
       </p>
       <p className="text-muted-foreground">

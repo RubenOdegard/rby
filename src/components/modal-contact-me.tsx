@@ -55,9 +55,6 @@ export default function ModalContactMe({ height, width }: TDialog) {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Get in touch</DialogTitle>
-          <DialogDescription>
-            I&apos;ll get back to you in a bit.
-          </DialogDescription>
         </DialogHeader>
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
