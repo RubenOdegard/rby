@@ -18,7 +18,7 @@ export default function Projects() {
       {/* Container */}
       <div className="flex justify-center space-y-16 md:space-y-24">
         {/* Content section */}
-        <section className="w-full flex justify-center prose dark:prose-invert lg:prose-lg min-h-[70dvh] pt-6 z-10">
+        <section className="w-full flex justify-center prose dark:prose-invert lg:prose-lg min-h-[70dvh] pt-8 md:pt-16 z-10">
           <div className="w-full 3xl:px-24 mx-auto">
             <div className="flex max-w-4xl justify-center mx-auto">
               <div className="flex w-full flex-col">
@@ -32,29 +32,14 @@ export default function Projects() {
                   Personal collection of projects that I want to showcase.
                 </h2>
 
-                <p className="text-sm   mb-0 pb-0">
-                  Not all projects are worth showcasing, check out my{" "}
-                  <Link
-                    href="https://github.com/rubenodegard"
-                    data-umami-event="projects-github-profile"
-                    className="m-0 p-0 mr-[0.2rem]"
-                    target="_blank"
-                  >
-                    Github
-                  </Link>
-                  for snippets and snacks.
-                </p>
-
                 {/* conditionally render "show more" or a icon based on viewport. */}
                 <p className="text-sm pt-0 mt-4 md:mt-2">
-                  Click
+                  Click{" "}
                   <span className="hidden md:inline font-semibold">Open</span>
                   <span className="md:hidden inline-block px-2">
                     <PictureInPicture size={16} />
-                  </span>
-                  or{"  "}
-                  to open a modal and display more in dept information about a
-                  project.
+                  </span>{" "}
+                  to display more in dept inforomation about a project.
                 </p>
               </div>
             </div>

@@ -86,10 +86,10 @@ const showcaseItems = [
   },
 ];
 
-export default function ShowcaseTools() {
+export default function ToolsShowcase() {
   return (
-    <div className="relative z-40 mb-6 mt-12 ">
-      <div className="border p-1.5 rounded-lg zoom grid grid-cols-4 sm:grid-cols-8 md:grid-cols-8 max-w-md gap-1 w-1/1">
+    <div className="relative z-40 mb-6 mt-12 md:mt-0 md:mb-0 ">
+      <div className="border p-1.5 rounded-lg zoom grid grid-cols-8 md:grid-cols-4    gap-1 w-1/1">
         {showcaseItems.map((item, index) => (
           <div className={`relative z-30 ${item.styling}`} key={index + 1}>
             {item.icon}

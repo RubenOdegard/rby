@@ -6,9 +6,9 @@ import Link from "next/link";
 const ModuleActivities = () => {
   return (
     <article className="space-y-4 md:space-y-6 ">
-      <h2 className="text-lg md:text-xl lg:text-2xl">
-        Activity Monitor & Planner
-      </h2>
+      <h3 className="text-lg md:text-xl lg:text-2xl ">
+        Activity Monitor
+      </h3>
       <p className="text-muted-foreground">
         A quick overview of my current and upcoming activities, either recently
         completed, ongoing or planned for the near future.

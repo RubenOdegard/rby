@@ -28,10 +28,11 @@ export default function ModalProjectDetails({
       <DialogTrigger asChild>
         <Button
           aria-label="open more details about the project"
-          data-umami-event="projects-open-details"
+          data-umami-event={`projects-open-details-${data.title}`}
           variant="outline"
           size="sm"
           className="text-xs md:text-sm"
+          disabled={data.hidden === false ? false : true}
         >
           <span className="hidden md:inline">Open</span>
           <span className="md:hidden">
@@ -111,7 +112,6 @@ export default function ModalProjectDetails({
               : null}
           </p>
         </div>
-
         {data.showcase.contentSection
           ? data.showcase.contentSection.map((content, index) => (
             <div

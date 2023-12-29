@@ -7,7 +7,7 @@ import ProjectCarousel from "./project-carousel";
 const ShowProjects = () => {
   return (
     <article className="space-y-4 md:space-y-6 max-w-4xl mx-auto z-30 ">
-      <h2 className="text-lg md:text-xl lg:text-2xl">Featured Projects</h2>
+      <h3 className="text-lg md:text-xl lg:text-2xl">Featured Projects</h3>
       <div className="flex max-w-4xl relative p-2 rounded-xl transition duration-250 border-ring/10 border bg-card/50">
         <div className="inset-0 absolute bg-blue-950/50 blur-3xl -z-10 animate-pulse" />
         <ProjectCarousel />

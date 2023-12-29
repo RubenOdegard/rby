@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   {/* classes used on every section */}
-  const sectionClasses = "w-full prose dark:prose-invert lg:prose-lg";
+  const sectionClasses = "w-full prose dark:prose-invert lg:prose-lg py-16";
   return (
     <main className="flex min-h-screen flex-col items-center px-4 md:px-12 lg:px-0 overflow-x-hidden relative ">
       {/* Render background in the hero section */}
@@ -26,11 +26,11 @@ export default function Home() {
           <ModuleHero />
         </section>
 
-        <section className={cn(sectionClasses, "relative max-w-4xl")}>
+        <section className={cn(sectionClasses, "relative max-w-4xl pt-0")}>
           <ModuleProjects />
         </section>
 
-        <section className={cn(sectionClasses, "max-w-2xl")}>
+        <section className={cn(sectionClasses, "max-w-4xl")}>
           <ModuleInformation />
         </section>
 

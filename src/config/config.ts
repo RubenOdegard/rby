@@ -408,20 +408,21 @@ export const projects = [
   },
 
   {
-    title: "Developer Portfolio",
-    desc: "A portfolio created as a final project for Harvard's CS50x course.",
+    title: "Spotify Web API - Client Credentials",
+    desc:
+      "Example of working with the Spotify Web API with Client Credentials.",
     year: "2023",
     content: "",
-    hidden: false,
+    hidden: true,
     featured: true,
     image: "/images/p1/hero.jpg",
     imagealt: "hero image",
     link: "none",
     live: "none",
-    tags: ["NextJS", "Typescript", "TailwindCSS"],
+    tags: ["NextJS", "Typescript", "Spotify Web API"],
     showcase: {
       introduction: [
-        "Personal developer portfolio as a final project in Harvard CS50x online course. Built using Next.js, Typescript and TailwindCSS.",
+        "A showcase project for the Spotify Web API using Cliend Credentials",
       ],
       desc: [
         "For the final project the requirements were simple, create a bigger project using technologies of own choosing.",

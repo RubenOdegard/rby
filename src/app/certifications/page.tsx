@@ -4,13 +4,12 @@ import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { certifications } from "@/config/config";
+import { certifications } from "@/config/certifications";
 import { formatMonthYear, getActivityStatus } from "@/lib/utils";
 import { TCertification } from "@/types/types";
 import { LinkIcon } from "lucide-react";
@@ -58,7 +57,7 @@ export default function Certifications() {
     <main className="flex min-h-screen flex-col px-4 overflow-x-hidden ">
       <ModuleBackgroundColors />
       <div className="flex justify-center space-y-16 md:space-y-24 pb-10">
-        <section className="w-full max-w-4xl prose dark:prose-invert lg:prose-lg flex min-h-[70dvh] pt-6 z-10">
+        <section className="w-full max-w-4xl prose dark:prose-invert lg:prose-lg flex min-h-[70dvh]  pt-8 md:pt-16 z-10">
           <div className="flex w-full flex-col">
             <PageTitleAndReturnLink
               href="/"

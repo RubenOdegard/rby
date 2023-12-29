@@ -6,7 +6,7 @@ import Link from "next/link";
 const ModuleCertifications = () => {
   return (
     <article className="space-y-4 md:space-y-6">
-      <h2 className="text-lg md:text-xl lg:text-2xl">Certifications</h2>
+      <h3 className="text-lg md:text-xl lg:text-2xl ">Certifications</h3>
       <p className="text-muted-foreground">
         In the future, there are several courses and certifications that I have
         a particular interest in completing and delving into in my own time.

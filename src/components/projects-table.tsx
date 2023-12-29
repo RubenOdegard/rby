@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { projects } from "@/config/config";
+import { projects } from "@/config/projects";
 import { TProject } from "@/types/types";
 import { Badge } from "@/components/ui/badge";
 import ShowProjectDetails from "@/components/modal-project-details";
@@ -38,7 +38,7 @@ const ProjectsTable = () => {
                     {/* open modal with project details */}
                     <ShowProjectDetails data={project} />
                   </TableCell>
-                  <TableCell className="text-xs sm:text-sm relative">
+                  <TableCell className="text-xs sm:text-sm relative font-semibold">
                     {/* rendering a badge on the featured projects from the home page */}
                     {project.featured && <FeaturedBadge />}
 

@@ -16,12 +16,11 @@ $ docker run -p 3000:3000 dev-port-docker
 
 ### Implementasions
 
-- [x] **Umami Analytics** (open source alternative to google analytics) - _GDPR
-      compliant, no cookies._
-
-- [ ] **Nextjs i18n** (internationalization)
-- [ ] **E2E tests using Cypress.**
-- [ ] **Code refactoring** - correctly split up components by the single
-      reponsibility principle.
 - [ ] **Split up site's config file into multiple files**
+- [ ] **Code refactoring** - correctly split up components by the single
 - [ ] **Visual overhaul on certain elements.**
+- [ ] **Nextjs i18n** (internationalization)
+- [x] **Umami Analytics** (open source alternative to google analytics) - \_GDPR
+      compliant, no cookies.\_
+- [ ] **E2E tests using Cypress.** reponsibility principle.
+      (config/activiites/certifications/projects)
