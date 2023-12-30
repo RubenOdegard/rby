@@ -438,7 +438,7 @@ export const projects = [
       longSection: {
         title: "SEO and Accessibility",
         text: [
-          "Ensured correct page structure, semantic HTML, dynamic metadata, clean and descriptive URLs, responsive design, image optimization, Open Graph Image, XML Sitemap, and implemented a Robots.txt file for effective site crawling. Website can be navigated with keyboard and buttons have correct aria-labels.",
+          "",
         ],
       },
       tags: [

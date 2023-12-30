@@ -155,7 +155,7 @@ export const projects = [
     imagealt: "hero image",
     link: "none",
     live: "none",
-    tags: ["C", "Python", "Algorithms"],
+    tags: ["C", "Python", "SQL", "Algorithms"],
     showcase: {
       introduction: [
         "",
