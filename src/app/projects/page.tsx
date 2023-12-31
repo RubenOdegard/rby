@@ -39,7 +39,7 @@ export default function Projects() {
                   <span className="md:hidden inline-block px-2">
                     <PictureInPicture size={16} />
                   </span>{" "}
-                  to display more in dept inforomation about a project.
+                  to display more in dept information about a project.
                 </p>
               </div>
             </div>

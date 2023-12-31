@@ -107,7 +107,7 @@ const LayoutNav = () => {
       {/* mobile nav */}
       <div
         className={`md:hidden absolute w-full z-50 pt-${
-          scrollPosition > 0 ? 16 : 8
+          scrollPosition > 0 ? 16 : 0
         }`}
       >
         <div

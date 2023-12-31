@@ -48,10 +48,10 @@ export default function ModalProjectDetails({
                 {data.title}
               </DialogTitle>
               <DialogDescription className="text-left">
-                <p className="text-secondary-foreground">
+                <p className="text-secondary-foreground prose">
                   {data.showcase.introduction}
                 </p>
-                <p className="mt-3">
+                <p className="mt-3 prose">
                   {data.showcase.desc.map((desc, index) => {
                     return <span key={`desc-${index}`}>{desc}</span>;
                   })}
@@ -85,7 +85,7 @@ export default function ModalProjectDetails({
           </div>
         </DialogHeader>
         <div className="grid grid-cols-6 gap-x-8 gap-y-4 -mt-8 lg:mt-0">
-          <div className="flex flex-col space-x-2 col-span-6 lg:col-span-4 mt-8 lg:mt-0">
+          <div className="flex flex-col space-x-2 col-span-6 lg:col-span-4 mt-8 lg:mt-0 prose">
             <h3>{data.showcase.mainSection?.title}</h3>
             <p className="text-muted-foreground text-sm md:text-base">
               {data.showcase.mainSection?.text?.map((content, index) => {
@@ -93,7 +93,7 @@ export default function ModalProjectDetails({
               })}
             </p>
           </div>
-          <div className="flex flex-col space-x-2 col-span-6 lg:col-span-2 order-first lg:order-last">
+          <div className="flex flex-col space-x-2 col-span-6 lg:col-span-2 order-first lg:order-last prose">
             <h3>Tags</h3>
             <p className="text-muted-foreground gap-4 flex flex-wrap lg:mt-6 mt-4">
               {data.showcase.tags.map((tag) => {
@@ -104,7 +104,7 @@ export default function ModalProjectDetails({
         </div>
         <div className="flex flex-col col-span-6 ">
           <h3>{data.showcase.longSection?.title}</h3>
-          <p className="text-muted-foreground text-sm md:text-base ml-[8px]">
+          <p className="text-muted-foreground text-sm md:text-base ml-[8px] prose">
             {data.showcase.longSection?.text
               ? data.showcase.longSection?.text?.map((text, index) => (
                 <span key={`longSection-${index}`}>{text}</span>
@@ -116,7 +116,7 @@ export default function ModalProjectDetails({
           ? data.showcase.contentSection.map((content, index) => (
             <div
               key={`contentSection-${index}`}
-              className={"grid grid-cols-6 place-items-center gap-x-8 px-0 md:px-8 "}
+              className={"grid grid-cols-6 place-items-center gap-x-8 px-0 md:px-8 prose"}
             >
               {index % 2 === 0
                 ? (
@@ -140,7 +140,7 @@ export default function ModalProjectDetails({
                     {/* Text on the right */}
                     <div className="flex flex-col w-full space-x-2 order-first lg:order-last col-span-6 lg:col-span-3 ">
                       <h3>{content.title}</h3>
-                      <p className="text-muted-foreground  text-sm md:text-base ">
+                      <p className="text-muted-foreground  text-sm md:text-base prose">
                         {content.text.map((text, textIndex) => (
                           <span
                             key={`contentSection-${index}-text-${textIndex}`}
@@ -158,7 +158,7 @@ export default function ModalProjectDetails({
                     {/* Text on the left */}
                     <div className="flex flex-col w-full space-x-2 order-first col-span-6 lg:col-span-3">
                       <h3>{content.title}</h3>
-                      <p className="text-muted-foreground  text-sm md:text-base">
+                      <p className="text-muted-foreground  text-sm md:text-base prose">
                         {content.text.map((text, textIndex) => (
                           <span
                             key={`contentSection-${index}-text-${textIndex}`}
