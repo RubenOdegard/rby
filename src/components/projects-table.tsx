@@ -1,3 +1,8 @@
+import ShowProjectDetails from "@/components/modal-project-details";
+import { Badge } from "@/components/ui/badge";
+import FeaturedBadge from "@/components/ui/featured-badge";
+import GithubLinkButton from "@/components/ui/github-link-button";
+import LivePreviewButton from "@/components/ui/live-preview-button";
 import {
   Table,
   TableBody,
@@ -8,11 +13,6 @@ import {
 } from "@/components/ui/table";
 import { projects } from "@/config/projects";
 import { TProject } from "@/types/types";
-import { Badge } from "@/components/ui/badge";
-import ShowProjectDetails from "@/components/modal-project-details";
-import LivePreviewButton from "@/components/ui/live-preview-button";
-import GithubLinkButton from "@/components/ui/github-link-button";
-import FeaturedBadge from "@/components/ui/featured-badge";
 
 const ProjectsTable = () => {
   return (
@@ -38,7 +38,7 @@ const ProjectsTable = () => {
                     {/* open modal with project details */}
                     <ShowProjectDetails data={project} />
                   </TableCell>
-                  <TableCell className="text-xs sm:text-sm relative font-semibold">
+                  <TableCell className="text-xs sm:text-sm relative font-semibold lg:min-w-[250px]">
                     {/* rendering a badge on the featured projects from the home page */}
                     {project.featured && <FeaturedBadge />}
 

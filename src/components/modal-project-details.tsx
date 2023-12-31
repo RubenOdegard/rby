@@ -9,12 +9,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { TProject } from "@/types/types";
+import { PictureInPicture } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import GithubLinkButton from "./ui/github-link-button";
 import LivePreviewButton from "./ui/live-preview-button";
-import { PictureInPicture } from "lucide-react";
 
 interface ModalProjectDetailsProps {
   data: TProject;
@@ -86,9 +86,9 @@ export default function ModalProjectDetails({
         </DialogHeader>
         <div className="grid grid-cols-6 gap-x-8 gap-y-4 -mt-8 lg:mt-0">
           <div className="flex flex-col space-x-2 col-span-6 lg:col-span-4 mt-8 lg:mt-0">
-            <h3>{data.showcase.mainSection.title}</h3>
+            <h3>{data.showcase.mainSection?.title}</h3>
             <p className="text-muted-foreground text-sm md:text-base">
-              {data.showcase.mainSection.text.map((content, index) => {
+              {data.showcase.mainSection?.text?.map((content, index) => {
                 return <span key={`mainSection-${index}`}>{content}</span>;
               })}
             </p>
@@ -103,10 +103,10 @@ export default function ModalProjectDetails({
           </div>
         </div>
         <div className="flex flex-col col-span-6 ">
-          <h3>{data.showcase.longSection.title}</h3>
+          <h3>{data.showcase.longSection?.title}</h3>
           <p className="text-muted-foreground text-sm md:text-base ml-[8px]">
-            {data.showcase.longSection.text
-              ? data.showcase.longSection.text.map((text, index) => (
+            {data.showcase.longSection?.text
+              ? data.showcase.longSection?.text?.map((text, index) => (
                 <span key={`longSection-${index}`}>{text}</span>
               ))
               : null}

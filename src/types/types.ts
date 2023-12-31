@@ -13,16 +13,16 @@ export type TProject = {
   showcase: {
     introduction: string[];
     desc: string[];
+    tags: string[];
     mainSection: {
       title: string;
       text: string[];
     };
-    longSection: {
-      title: string;
-      text: string[];
+    longSection?: {
+      title?: string;
+      text?: string[];
     };
-    tags: string[];
-    contentSection: {
+    contentSection?: {
       title: string;
       text: string[];
       image: string;

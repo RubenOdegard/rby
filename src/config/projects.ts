@@ -83,7 +83,7 @@ export const projects = [
     imagealt: "hero image",
     link: "none",
     live: "none",
-    tags: ["Spotify Web API", "NextJS"],
+    tags: ["Spotify Web API", "Typescript"],
     showcase: {
       introduction: [
         "A showcase project for the Spotify Web API using Cliend Credentials",
@@ -145,8 +145,8 @@ export const projects = [
   },
 
   {
-    title: "CS50x",
-    desc: "Collection of labs and project assignments during Harvard's CS50x",
+    title: "CS50x - Computer Science",
+    desc: "Collection of 9 labs and 10 problem sets during Harvard's CS50x",
     year: "2023",
     content: "",
     hidden: true,
@@ -158,7 +158,7 @@ export const projects = [
     tags: ["C", "Python", "SQL", "Algorithms"],
     showcase: {
       introduction: [
-        "",
+        "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
       ],
       desc: [
         "",
@@ -166,48 +166,22 @@ export const projects = [
       mainSection: {
         title: "CS50x - Online Course",
         text: [
-          "",
+          "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
         ],
       },
-      longSection: {
-        title: "SEO and Accessibility",
-        text: [
-          "",
-        ],
-      },
+      longSection: {},
       tags: [
-        "NextJS",
-        "Typescript",
-        "TailwindCSS",
+        "Computer Science",
+        "Data Structures",
+        "Algorithms",
+        "C",
+        "Python",
+        "SQL",
+        "HTML",
+        "CSS",
+        "Javascript",
       ],
-      contentSection: [
-        {
-          title: "Projects",
-          text: [
-            "",
-          ],
-          image: "/images/p1/project-page.jpg",
-          imagealt: "project page",
-        },
-        {
-          title: "Activities",
-          text: [
-            "",
-          ],
-
-          image: "/images/p1/activity-page.jpg",
-          imagealt: "activity page",
-        },
-        {
-          title: "Certifications",
-          text: [
-            "",
-          ],
-
-          image: "/images/p1/certification-page.jpg",
-          imagealt: "certifiation page",
-        },
-      ],
+      contentSection: [],
     },
   },
 ];
