@@ -12,7 +12,7 @@ export default function Home() {
   {/* classes used on every section */}
   const sectionClasses = "w-full prose dark:prose-invert lg:prose-lg py-16";
   return (
-    <main className="flex min-h-screen flex-col items-center px-8 sm:px-12 lg:px-0 overflow-x-hidden relative ">
+    <main className="flex min-h-screen flex-col items-center px-4 sm:px-12 lg:px-0 overflow-x-hidden relative ">
       {/* Render background in the hero section */}
       <ModuleBackgroundHero />
       {/* Main page sections */}
