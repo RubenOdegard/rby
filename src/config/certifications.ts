@@ -54,15 +54,15 @@ export const certifications = [
 
   {
     title: "The Odin Project",
-    status: 0,
+    status: 1,
     expandable: 1,
     school: 0,
     link: "https://www.theodinproject.com/",
     certification: "",
     place: "Erik Trautman",
     type: "Online Course",
-    startDate: "",
-    endDate: "",
+    startDate: "2024/01/01",
+    endDate: "2024/12/31",
     desc:
       "The Odin Project is an open-source curriculum for learning web development. It provides free, high-quality resources and a supportive community for self-learners.",
     topics: [

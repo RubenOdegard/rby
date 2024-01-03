@@ -7,16 +7,19 @@ import ModuleProjects from "@/components/module-projects";
 import { cn } from "@/lib/utils";
 
 // TODO: Fix every link in the config file for activities and certifications
+// TODO: Add images and write about Spotify API Project.
+// TODO: Complete the blog project.
 
 export default function Home() {
   {/* classes used on every section */}
-  const sectionClasses = "w-full prose dark:prose-invert lg:prose-lg py-16";
+  const sectionClasses =
+    "w-full prose dark:prose-invert lg:prose-lg py-6 md:py-16";
   return (
     <main className="flex min-h-screen flex-col items-center px-4 sm:px-12 lg:px-0 overflow-x-hidden relative ">
       {/* Render background in the hero section */}
       <ModuleBackgroundHero />
       {/* Main page sections */}
-      <div className="flex w-full h-full justify-center items-center flex-col space-y-16 md:space-y-32 pb-32">
+      <div className="flex w-full h-full justify-center items-center flex-col space-y-16 md:space-y-32 pb-16 md:pb-32">
         <section
           className={cn(
             sectionClasses,

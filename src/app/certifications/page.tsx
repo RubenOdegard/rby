@@ -152,7 +152,7 @@ export default function Certifications() {
                         <TableCell className="hidden md:table-cell">
                           {certification.type}
                         </TableCell>
-                        <TableCell className="hidden md:table-cell">
+                        <TableCell className="hidden md:table-cell min-w-[180px]">
                           {getCertificationStatusText(
                               certification.startDate,
                               certification.endDate,

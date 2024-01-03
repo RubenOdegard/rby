@@ -5,68 +5,52 @@ export const projects = [
       "Example of working with the Spotify Web API with Client Credentials.",
     year: "2023",
     content: "",
-    hidden: true,
-    featured: false,
-    image: "/images/p1/hero.jpg",
+    hidden: false,
+    featured: true,
+    image: "https://gcdnb.pbrd.co/images/P5tYKDhk0Q1i.png?o=1",
     imagealt: "hero image",
-    link: "none",
-    live: "none",
-    tags: ["Spotify Web API", "Typescript"],
+    link: "https://github.com/RubenOdegard/spotify-client-credentials",
+    live: "https://spotify-client-credentials.vercel.app/",
+    tags: ["Spotify API", "Typescript", "Axios"],
     showcase: {
       introduction: [
         "A showcase project for the Spotify Web API using Cliend Credentials",
       ],
       desc: [
-        "For the final project the requirements were simple, create a bigger project using technologies of own choosing.",
-        "I immediately thought about creating a developer portfolio, as it is a platform I'm going to be using going forward while trying to step in to a new career field.",
+        "Spotify Web API has multiple methods of authenticating API requests, one of them being Client Credentials. ",
+        "When using Client Credentials, you have access to the Spotify API data except user related data.",
       ],
       mainSection: {
-        title: "CS50x - Online Course",
+        title: "About",
         text: [
-          "Selecting the technologies for this project ment going with something that was already familiar to me, even before starting CS50x.",
-          "I have previous experience with React and Next, and went with Tailwind for styling because of the speed of development. On the Github page for this project I go into more detail on my thought process both pre and post build.",
+          "There is four sections of this website; artist, top tracks, albums and related artists. You are able to navigate through related artist to change the current artist. Each track and album can be clicked to display more in depth information about the selected item, and there is a popularity bar on each related artist (region locked to Norway). In this example app there is 4 formatter functions which prettify some of the data coming back from Spotify, these can be found in the readme.md and the project on Github.",
+          " ",
         ],
       },
-      longSection: {
-        title: "SEO and Accessibility",
-        text: [
-          "Ensured correct page structure, semantic HTML, dynamic metadata, clean and descriptive URLs, responsive design, image optimization, Open Graph Image, XML Sitemap, and implemented a Robots.txt file for effective site crawling. Website can be navigated with keyboard and buttons have correct aria-labels.",
-        ],
-      },
+      longSection: {},
       tags: [
         "NextJS",
         "Typescript",
         "TailwindCSS",
-        "ReactJS",
-        "Radix UI",
-        "Geist",
+        "Spotify Web API",
+        "Axios",
       ],
       contentSection: [
         {
-          title: "Projects",
+          title: "Track Details",
           text: [
-            "A page for a collection of projects worth showcasing. Github and live preview links and tags. Expandable for more detailed information.",
+            "Track details in a scrollable modal, closes on outside click or the close button. Image, track name and individual artists are clickable and links to their respective Spotify pages. Energy level and dancability is calculated from the API reponse range of 0.0 - 1.",
           ],
-          image: "/images/p1/project-page.jpg",
-          imagealt: "project page",
+          image: "https://gcdnb.pbrd.co/images/fgxvWaqrxvsf.png?o=1",
+          imagealt: "Track Details",
         },
         {
-          title: "Activities",
+          title: "Album Details",
           text: [
-            "A page for showing current, planned and already completed activities. Conditionally rendering status and fomatting text to more readable dates.",
+            "Track details in a scrollable modal, closes on outside click or the close button. Image, album name and invididual artist are clickable as well.",
           ],
-
-          image: "/images/p1/activity-page.jpg",
-          imagealt: "activity page",
-        },
-        {
-          title: "Certifications",
-          text: [
-            "A page for showing current, planned and already completed certifications. Conditionally rendering status and fomatting text to more readable dates.",
-          ],
-
-          image: "/images/p1/certification-page.jpg",
-          imagealt: "certifiation page",
+          image: "https://gcdnb.pbrd.co/images/iCI8UzdAhI6j.png?o=1",
+          imagealt: "Album Details Details",
         },
       ],
     },
@@ -144,13 +128,13 @@ export const projects = [
   },
 
   {
-    title: "CS50 - Computer Science",
+    title: "CS50",
     desc:
       "Collection of 9 labs and 10 problem sets and one final project during Harvard's CS50 - Introduction to Computer Science.",
     year: "2023",
     content: "",
     hidden: false,
-    featured: true,
+    featured: false,
     image:
       "https://certificates.cs50.io/29dbe20a-aaab-4cc0-8d03-9c9bb90acce2.png?size=letter",
     imagealt: "hero image",

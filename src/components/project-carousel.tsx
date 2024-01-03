@@ -18,7 +18,7 @@ import { projects } from "@/config/projects";
 const ProjectCarousel = () => {
   const plugin = React.useRef(
     Autoplay({
-      delay: 5000,
+      delay: 6500,
       stopOnInteraction: false,
     }),
   );
@@ -48,14 +48,15 @@ const ProjectCarousel = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black opacity-100">
                     </div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-5/6 md:w-full sm:max-w-xl px-1 py-1.5 md:px-8 md:py-8 rounded-md bg-gradient-to-t from-gray-950/50 to-gray-900/30 border border-accent/10 dark:border-ring/10 shadow-md backdrop-blur-sm transition-all duration-500">
-                      <h3 className="text-sm md:text-lg font-bold m-0 text-white">
+
+                    <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center  md:w-full sm:max-w-xl py-2.5 px-4  md:px-10 md:py-8 rounded-md bg-gradient-to-t from-gray-950/50 to-gray-900/30 border border-accent/10 dark:border-ring/10 shadow-md backdrop-blur-sm transition-all duration-500">
+                      <h3 className="hidden md:block text-sm md:text-lg font-bold m-0  text-white">
                         {project.title}
                       </h3>
                       <p className="hidden sm:inline-block text-xs md:text-sm mt-0 opacity-90">
                         {project.desc}
                       </p>
-                      <div className="flex w-full gap-1.5 items-center justify-center mt-2 md:mt-4">
+                      <div className="flex w-full gap-3 items-center justify-center  md:mt-4">
                         <LivePreviewButton
                           href={project.live}
                           variant="outline"

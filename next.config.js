@@ -20,6 +20,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "certificates.cs50.io",
       },
+      {
+        protocol: "https",
+        hostname: "gcdnb.pbrd.co",
+      },
     ],
   },
 };

@@ -5,7 +5,7 @@ const ModuleInformation = () => {
   return (
     <article className="col-span-4 ">
       <h3 className="text-lg md:text-xl lg:text-2xl ">
-        Me, myself and I
+        Me, myself & I
       </h3>
       <div className="flex flex-col md:flex-row gap-x-16">
         <div className="lg:w-2/3 w-full ">

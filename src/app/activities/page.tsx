@@ -153,7 +153,7 @@ export default function Activities() {
                       <TableCell className="hidden md:table-cell">
                         {certification.type}
                       </TableCell>
-                      <TableCell className="hidden md:table-cell">
+                      <TableCell className="hidden md:table-cell min-w-[180px]">
                         {getActivityStatusText(
                             certification.startDate,
                             certification.endDate,

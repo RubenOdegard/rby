@@ -7,7 +7,7 @@ export const siteOptions = {
   },
   developerName: "Ruben Odegard",
   developerTitle: "Full Stack Developer",
-  developerDesc: "Self-taught developer looking for a new workplace in Oslo.",
+  developerDesc: "Self-taught developer based in Oslo.",
 };
 
 export const navLinks = [
