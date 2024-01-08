@@ -48,6 +48,8 @@ const LayoutNav = () => {
             scrollPosition > 0 ? "text-sm" : "text-xl"
           } transition-all duration-200 ease-in-out`}
         >
+          {
+            /*
           <NavLinkLogo
             href="/"
             className="flex items-center gap-1 no-underline"
@@ -60,8 +62,11 @@ const LayoutNav = () => {
               width={scrollPosition > 0 ? 24 : 36}
               priority
             />
-            <span className="text-sm ml-2">RBY</span>
           </NavLinkLogo>
+          */
+          }
+
+          <span className="text-md ml-2">RBY</span>
         </span>
 
         <ul
@@ -143,7 +148,6 @@ const LayoutNav = () => {
                     </NavLink>
                   </li>
                 ))}
-                <li className="m-0"></li>
               </ul>
             </div>
           </nav>
