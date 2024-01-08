@@ -41,7 +41,7 @@ export const certifications = [
     status: 1,
     expandable: 1,
     school: 0,
-    link: "",
+    link: "https://www.oslomet.no/studier/tkd/evu-tkd/interaktivitet-design",
     certification: "",
     place: "OsloMet",
     type: "Campus",
