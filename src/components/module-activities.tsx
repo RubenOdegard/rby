@@ -1,11 +1,11 @@
-import { activity } from "@/config/config";
+import { activity } from "@/config/activites";
 import ActivityCard from "@/components/activity-card";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
 const ModuleActivities = () => {
   return (
-    <article className="space-y-4 md:space-y-6 ">
+    <article className="space-y-4 md:space-y-6">
       <h3 className="text-lg md:text-xl lg:text-2xl ">
         Activity Monitor
       </h3>
@@ -14,7 +14,7 @@ const ModuleActivities = () => {
         completed, ongoing or planned for the near future.
       </p>
 
-      <ul className="list-none mx-0 mt-4  space-y-4 md:px-4 md:pb-5 md:pt-3 md:bg-card md:border md:border-ring/10 md:rounded-lg">
+      <ul className="list-none mx-0 mt-4  space-y-4">
         {activity.map((
           {
             id,
