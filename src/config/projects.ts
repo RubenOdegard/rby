@@ -1,5 +1,64 @@
 export const projects = [
   {
+    title: "The Odin Project",
+    desc: "Collection of projects during The Odin Project.",
+    year: "2023",
+    content: "",
+    hidden: true,
+    featured: false,
+    image: "none",
+    imagealt: "hero image",
+    link: "https://github.com/RubenOdegard/the-odin-project",
+    live: "none",
+    tags: ["Node.js", "Javascript", "ReactJS"],
+    showcase: {
+      introduction: [
+        "Collection of projects during The Odin Project.",
+      ],
+      desc: [
+        "",
+      ],
+      mainSection: {
+        title: "",
+        text: [],
+      },
+      longSection: {},
+      tags: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Git",
+        "GitHub",
+        "Node.js",
+        "Express.js",
+        "SQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Mongoose",
+        "React.js",
+        "Testing (Jasmine, Jest)",
+      ],
+      contentSection: [
+        {
+          title: "Track Details",
+          text: [
+            "Track details in a scrollable modal, closes on outside click or the close button. Image, track name and individual artists are clickable and links to their respective Spotify pages. Energy level and dancability is calculated from the API reponse range of 0.0 - 1.",
+          ],
+          image: "https://gcdnb.pbrd.co/images/fgxvWaqrxvsf.png?o=1",
+          imagealt: "Track Details",
+        },
+        {
+          title: "Album Details",
+          text: [
+            "Track details in a scrollable modal, closes on outside click or the close button. Image, album name and invididual artist are clickable as well.",
+          ],
+          image: "https://gcdnb.pbrd.co/images/iCI8UzdAhI6j.png?o=1",
+          imagealt: "Album Details Details",
+        },
+      ],
+    },
+  },
+  {
     title: "Spotify Web API",
     desc:
       "Example of working with the Spotify Web API with Client Credentials.",
