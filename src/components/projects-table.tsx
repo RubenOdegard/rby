@@ -22,7 +22,7 @@ const ProjectsTable = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Read more</TableHead>
+              <TableHead className="min-w-[110px]">Read more</TableHead>
               <TableHead>Title</TableHead>
               <TableHead className="hidden md:table-cell">Desc</TableHead>
               <TableHead>Source</TableHead>
@@ -44,7 +44,7 @@ const ProjectsTable = () => {
 
                     {project.title}
                   </TableCell>
-                  <TableCell className="hidden md:table-cell">
+                  <TableCell className="hidden md:table-cell text-muted-foreground">
                     {project.desc}
                   </TableCell>
                   <TableCell>
@@ -67,7 +67,14 @@ const ProjectsTable = () => {
                   <TableCell className="hidden lg:table-cell">
                     <div className="flex gap-1.5">
                       {project.tags.map((badge) => {
-                        return <Badge key={badge + 1}>{badge}</Badge>;
+                        return (
+                          <Badge
+                            key={badge + 1}
+                            className="dark:invert dark:border cursor-default"
+                          >
+                            {badge}
+                          </Badge>
+                        );
                       })}
                     </div>
                   </TableCell>
