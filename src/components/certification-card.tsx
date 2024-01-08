@@ -72,7 +72,7 @@ export default function CertificationCard(
 
             <Accordion type="single" className="pt-3" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger className=" p-0">
+                <AccordionTrigger className="p-0 text-muted-foreground">
                   Read more
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4">
