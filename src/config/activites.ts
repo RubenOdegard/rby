@@ -26,14 +26,14 @@ export const activity = [
 
   {
     id: 3,
-    title: "Google UX Design Certificate",
+    title: "The Odin Project",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     comment:
-      "Immerse yourself in the world of user experience design with the Google UX Design Certificate. Master the art of crafting interactive and user-friendly interfaces through strategic design choices. Elevate your skills and create captivating digital experiences.",
-    place: "Google",
+      "The Odin Project is an open-source curriculum for learning web development. It provides free, high-quality resources and a supportive community for self-learners.",
+    place: "Erik Trautman",
     type: "Online Course",
-    startDate: "2025/01/01",
-    endDate: "2025/06/30",
+    startDate: "2024/01/10",
+    endDate: "2024/12/31",
   },
 ];
