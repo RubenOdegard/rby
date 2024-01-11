@@ -1,5 +1,6 @@
 import React from "react";
 import ShowcaseTools from "@/components/showcase-tools";
+import Link from "next/link";
 
 const ModuleInformation = () => {
   return (
@@ -9,14 +10,23 @@ const ModuleInformation = () => {
       </h3>
       <div className="flex flex-col md:flex-row gap-x-16">
         <div className="lg:w-2/3 w-full ">
-          <p className="text-muted-foreground">
-            As a self-taught developer, I take a step into a new career field
-            that aligns with my longstanding passion for web development. While
-            lacking professional developer experience, my personal projects have
-            been a source of{" "}
-            <b>self-learning, problem-solving, and curiosity</b>. The selected
-            projects in my portfolio demonstrate how I structure and work with
-            code.
+          <p className="text-foreground">
+            As a self-taught developer, I'm attempting take a step into a new
+            career field that aligns with my longstanding passion for web
+            development. As of now, I am balancing my current full time
+            employment, studies and and programming, together with other
+            hobbies. My personal projects have been a source of{" "}
+            <b>self-learning, problem-solving, and curiosity</b>, and my{" "}
+            <Link href="/projects">
+              open source projects
+            </Link>{" "}
+            in my portfolio showcases how I structure and work with code. As any
+            developer, I spend a whole lot of time creating solutions to my own
+            simple problems, just to see if I can solve it.
+          </p>
+          <p className="italic text-foreground">
+            Im currently thinking about creating a very minimalistic note app
+            for markdown, as I am writing all notes from my studies in markdown.
           </p>
           <p className="text-muted-foreground">
             I am not afraid to learn new technological tools and am a strong
