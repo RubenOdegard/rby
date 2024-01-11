@@ -29,7 +29,7 @@ export default function Projects() {
                   text="<- Back to home"
                 />
                 <h2>
-                  Personal collection of projects that I want to showcase.
+                  Collection of my personal open source projects.
                 </h2>
 
                 {/* conditionally render "show more" or a icon based on viewport. */}
