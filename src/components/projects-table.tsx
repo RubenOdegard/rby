@@ -20,12 +20,14 @@ const ProjectsTable = () => {
       <div className="inset-0 hidden dark:inline-block absolute bg-blue-950/40 blur-3xl -z-10 overflow-x-scroll" />
       <div className="rounded-lg p-2 border-ring/10 border bg-card/50 mt-8 shadow-md">
         <Table>
-          <TableHeader>
+          <TableHeader className="text-xs md:text-base">
             <TableRow>
-              <TableHead className="min-w-[110px]">Read more</TableHead>
+              <TableHead className="w-[12ch]">
+                Read more
+              </TableHead>
               <TableHead>Title</TableHead>
               <TableHead className="hidden md:table-cell">Desc</TableHead>
-              <TableHead>Source</TableHead>
+              <TableHead className="hidden md:table-cell">Source</TableHead>
               <TableHead className="hidden lg:table-cell">Year</TableHead>
               <TableHead className="hidden lg:table-cell">Tags</TableHead>
             </TableRow>
@@ -47,7 +49,7 @@ const ProjectsTable = () => {
                   <TableCell className="hidden md:table-cell text-muted-foreground">
                     {project.desc}
                   </TableCell>
-                  <TableCell>
+                  <TableCell className="hidden md:table-cell">
                     <div className="flex gap-1.5">
                       <LivePreviewButton
                         href={project.live}
