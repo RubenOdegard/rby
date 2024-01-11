@@ -6,9 +6,9 @@ import ModuleInformation from "@/components/module-information";
 import ModuleProjects from "@/components/module-projects";
 import { cn } from "@/lib/utils";
 
-// TODO: Fix every link in the config file for activities and certifications
-// TODO: Add images and write about Spotify API Project.
 // TODO: Complete the blog project.
+// TODO: Fix mobile padding on individual pages.
+// TODO: Redo the HeroSection, need to be more "eye catching"
 
 export default function Home() {
   {/* classes used on every section */}
