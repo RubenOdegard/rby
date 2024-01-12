@@ -11,8 +11,8 @@ const ModuleInformation = () => {
       <div className="flex flex-col md:flex-row gap-x-16">
         <div className="lg:w-2/3 w-full ">
           <p className="text-foreground">
-            As a self-taught developer, I'm attempting take a step into a new
-            career field that aligns with my longstanding passion for web
+            As a self-taught developer, I&apos;m attempting take a step into a
+            new career field that aligns with my longstanding passion for web
             development. As of now, I am balancing my current full time
             employment, studies and and programming, together with other
             hobbies. My personal projects have been a source of{" "}
