@@ -24,15 +24,10 @@ const ModuleInformation = () => {
             developer, I spend a whole lot of time creating solutions to my own
             simple problems, just to see if I can solve it.
           </p>
-          <p className="italic text-foreground">
-            Im currently thinking about creating a very minimalistic note app
-            for markdown, as I am writing all notes from my studies in markdown.
-          </p>
           <p className="text-muted-foreground">
-            I am not afraid to learn new technological tools and am a strong
-            advocate for using the right tools for the job at hand. Everything
-            becomes a bit easier when you understand that it&apos;s about{" "}
-            <i>how</i>{" "}
+            I like learning new technological tools and am a strong advocate for
+            using the right tools for the job at hand. Everything becomes a bit
+            easier when you understand that it&apos;s about <i>how</i>{" "}
             you absorb information and process it to create practical solutions
             for problem-solving.
           </p>
