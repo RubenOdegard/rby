@@ -43,18 +43,15 @@ export default function CertificationCard(
     }
   };
 
-  // Fix config.json to include the right texta and format
-  // Add a tooltip on TBD.
-
   return (
     <>
-      <Card className="shadow-md bg-card group p-4 md:p-6">
+      <Card className="group bg-card p-4 shadow-md md:p-6">
         <div className="relative flex gap-x-4">
-          <div className="flex flex-col w-full">
-            <div className="flex justify-between gap-x-4 relative">
-              <div className="py-0.5 text-xs md:text-base leading-5">
-                <span className="font-semibold flex gap-2 mt-0.5 sm:mt-0 items-center tracking-tight text-foreground ">
-                  <Shield size={16} className="text-foreground " />
+          <div className="flex w-full flex-col">
+            <div className="relative flex justify-between gap-x-4">
+              <div className="py-0.5 text-xs leading-5 md:text-base">
+                <span className="mt-0.5 flex items-center gap-2 font-semibold tracking-tight sm:mt-0  ">
+                  <Shield size={16} className="text-yellow-400 " />
                   {certification.title}
                 </span>
               </div>
@@ -65,8 +62,8 @@ export default function CertificationCard(
               />
             </div>
 
-            <span className="text-xs flex items-center gap-1 md:text-sm text-foreground">
-              <MapPin size={14} className="mr-[5px] ml-[1px] text-foreground" />
+            <span className="flex items-center gap-1 text-xs text-foreground/90 md:text-sm">
+              <MapPin size={14} className="ml-[1px] mr-[5px] text-yellow-400" />
               {certification.place}: {certification.type}
             </span>
 
@@ -77,21 +74,21 @@ export default function CertificationCard(
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4">
                   <ul className="m-0 p-0 ">
-                    {certification.topics.map((i, index) => {
+                    {certification.topics.map((i) => {
                       return (
                         <li
-                          key={index + 1}
-                          className=" text-xs leading-4 text-muted-foreground bg-card mt-2  transition-all duration-150 border py-1.5 px-2 shadow-inner rounded-md list-none "
+                          key={i}
+                          className=" mt-2 list-none rounded-md border bg-card  px-2 py-1.5 text-xs leading-4 text-muted-foreground shadow-inner transition-all duration-150 "
                         >
                           {i}
                         </li>
                       );
                     })}
                   </ul>
-                  <div className="flex gap-2 flex-wrap mx-2">
-                    {certification.tags.map((i, index) => {
+                  <div className="mx-2 flex flex-wrap gap-2">
+                    {certification.tags.map((i) => {
                       return (
-                        <Badge key={index + 1} className="bg-primary">
+                        <Badge key={i} className="bg-primary">
                           {i}
                         </Badge>
                       );
@@ -103,34 +100,36 @@ export default function CertificationCard(
                       asChild
                       size="sm"
                       variant="outline"
-                      className=" mb-0 w-1/2 "
+                      className=" mb-0 w-1/2 text-yellow-400"
                     >
                       <Link
                         href={certification.link}
                         target="_blank"
-                        className="no-underline group"
+                        className="group no-underline"
                       >
                         Link to course
-                        <MoveUpRightIcon className="h-3 w-3 ml-1 group-hover:ml-2 group-hover:rotate-45 transition-all" />
+                        <MoveUpRightIcon className="ml-1 h-3 w-3 transition-all group-hover:ml-2 group-hover:rotate-45" />
                       </Link>
                     </Button>
                     {certification.status === 0
                       ? (
                         <Button
                           aria-label="certification"
-                          data-umami-event="open certification" // TODO: edit this to show which certification is clicked.
+                          data-umami-event={`open certification-${certification.title}`}
                           asChild
                           size="sm"
                           variant="outline"
-                          className="mb-0 w-1/2"
+                          className="mb-0 w-1/2 text-yellow-400"
                         >
                           <Link
-                            href={certification.cert!}
+                            href={!certification.cert
+                              ? "/"
+                              : certification.cert}
                             target="_blank"
-                            className="no-underline group"
+                            className="group no-underline"
                           >
                             Certification
-                            <MoveUpRightIcon className="h-3 w-3 ml-1 group-hover:ml-2 group-hover:rotate-45 transition-all" />
+                            <MoveUpRightIcon className="ml-1 h-3 w-3 transition-all group-hover:ml-2 group-hover:rotate-45" />
                           </Link>
                         </Button>
                       )
@@ -157,7 +156,7 @@ export function CertProgress(
 ) {
   return (
     <div>
-      <span className="absolute -top-7 right-1/2 sm:-top-7 md:-top-9 translate-x-1/2 bg-primary-foreground text-foreground border-border border sm:relative pointer-events-none  transition-all duration-150  font-mono rounded-md text-xs flex gap-1.5 items-center px-2 py-0.5">
+      <span className="pointer-events-none absolute -top-7 right-1/2 flex translate-x-1/2 items-center gap-1.5 rounded-md border border-border bg-primary-foreground  px-2 py-0.5  font-sans text-xs text-foreground transition-all duration-150 sm:relative sm:-top-7 md:-top-9">
         <span
           className={`flex h-3 w-3 relative rounded-full z-20 ${
             getStatusColor(status)

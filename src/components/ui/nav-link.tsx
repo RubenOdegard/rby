@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import type { ClassValue } from "clsx";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 
 interface NavLinkProps extends LinkProps {
   children: React.ReactNode;
   className?: ClassValue;
+  onClick?: () => void;
 }
 
 export default function NavLink(
@@ -28,13 +30,21 @@ export default function NavLink(
     <Link
       href={href}
       {...props}
-      className={cn(className, {
-        "font-bold underline text-foreground": ariaCurrent === "page",
-        "font-normal no-underline text-foreground/70": ariaCurrent !== "page",
-      }, "hover:text-foreground transition-colors duration-200 ease-in-out")}
+      className={cn(
+        className,
+        {
+          "my-2 text-5xl font-extrabold text-yellow-400":
+            ariaCurrent === "page",
+          "my-0.5 text-4xl font-light text-gray-400": ariaCurrent !== "page",
+        },
+        "no-underline transition-colors duration-200 ease-in-out hover:text-white ",
+      )}
       aria-current={ariaCurrent as "page"}
     >
-      {children}
+      <div className="flex items-center justify-center gap-2">
+        {ariaCurrent === "page" ? <ArrowRight size={16} className="" /> : null}
+        {children}
+      </div>
     </Link>
   );
 }

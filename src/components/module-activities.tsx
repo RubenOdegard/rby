@@ -2,19 +2,20 @@ import { activity } from "@/config/activites";
 import ActivityCard from "@/components/activity-card";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import TextSectionHeader from "./text-section-header";
+import TextSectionDescription from "./text-section-description";
 
 const ModuleActivities = () => {
   return (
     <article className="space-y-4 md:space-y-6">
-      <h3 className="text-lg md:text-xl lg:text-2xl ">
-        Activity Monitor
-      </h3>
-      <p className="text-muted-foreground">
-        A quick overview of my current and upcoming activities, either recently
-        completed, ongoing or planned for the near future.
-      </p>
+      <div>
+        <TextSectionHeader>Activites</TextSectionHeader>
+        <TextSectionDescription>
+          A quick overview of my current and upcoming activities.
+        </TextSectionDescription>
+      </div>
 
-      <ul className="list-none mx-0 mt-4  space-y-4">
+      <ul className="mx-0 mt-4 list-none  space-y-4">
         {activity.map((
           {
             id,

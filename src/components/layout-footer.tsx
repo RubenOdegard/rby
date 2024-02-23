@@ -22,7 +22,7 @@ export default function LayoutFooter() {
           <FeatureDisabledDialog>
             <ToggleLanguage />
           </FeatureDisabledDialog>
-          <h4 className="text-muted-secondary">me@rubenodegard.com</h4>
+          <h4 className="text-yellow-400">me@rubenodegard.com</h4>
         </div>
         <div className="flex gap-2 order-2 md:order-2 mt-2 justify-self-center md:justify-self-end">
           <Link href="https://linkedin.com/in/rubenodegard" target="_blank">

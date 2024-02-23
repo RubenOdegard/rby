@@ -138,37 +138,6 @@ export const certifications = [
   },
   */
   {
-    title: "Google UX Design Certificate",
-    status: 2,
-    expandable: 1,
-    school: 1,
-    link: "https://grow.google/certificates/ux-design/",
-    certification: "",
-    place: "Google",
-    type: "Online Course",
-    startDate: "",
-    endDate: "",
-    desc:
-      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
-
-    topics: [
-      "Comprehensive understanding of User Experience (UX) Design principles",
-      "Applying UX design techniques to create user-friendly digital products",
-      "Design thinking and problem-solving strategies",
-      "Prototyping and usability testing",
-      "UI (User Interface) design principles",
-      "Creating wireframes and interactive prototypes",
-      "Real-world project experience",
-    ],
-    tags: [
-      "User Experience Design",
-      "UX/UI Design",
-      "Prototyping",
-      "Design Thinking",
-      "Google Certification",
-    ],
-  },
-  {
     title: "Google Cloud Certification",
     status: 2,
     expandable: 1,
@@ -229,6 +198,37 @@ export const certifications = [
     ],
   },
 
+  {
+    title: "Google UX Design Certificate",
+    status: 2,
+    expandable: 1,
+    school: 1,
+    link: "https://grow.google/certificates/ux-design/",
+    certification: "",
+    place: "Google",
+    type: "Online Course",
+    startDate: "",
+    endDate: "",
+    desc:
+      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
+
+    topics: [
+      "Comprehensive understanding of User Experience (UX) Design principles",
+      "Applying UX design techniques to create user-friendly digital products",
+      "Design thinking and problem-solving strategies",
+      "Prototyping and usability testing",
+      "UI (User Interface) design principles",
+      "Creating wireframes and interactive prototypes",
+      "Real-world project experience",
+    ],
+    tags: [
+      "User Experience Design",
+      "UX/UI Design",
+      "Prototyping",
+      "Design Thinking",
+      "Google Certification",
+    ],
+  },
   {
     title: "Linux Professional Institute LPIC-1",
     status: 2,

@@ -47,7 +47,7 @@ export default function ModalContactMe({ height, width }: TDialog) {
           aria-label="mail icon, contact me"
           variant="ghost"
           size="icon"
-          className="px-0"
+          className="px-0 text-yellow-400"
         >
           <MailIcon height={height} width={width} />
         </Button>

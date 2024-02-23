@@ -2,17 +2,21 @@ import { certifications, certificationsShowMax } from "@/config/config";
 import CertificationCard from "@/components/certification-card";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import TextSectionHeader from "./text-section-header";
+import TextSectionDescription from "./text-section-description";
 
 const ModuleCertifications = () => {
   return (
     <article className="space-y-4 md:space-y-6">
-      <h3 className="text-lg md:text-xl lg:text-2xl ">Certifications</h3>
-      <p className="text-muted-foreground">
-        In the future, there are several courses and certifications that I have
-        a particular interest in completing and delving into in my own time.
-      </p>
-
-      <ul className="list-none mx-0 mt-4 space-y-4">
+      <div>
+        <TextSectionHeader>Certifications</TextSectionHeader>
+        <TextSectionDescription>
+          In the future, there are several courses and certifications that I
+          have a particular interest in completing and delving into in my own
+          time.
+        </TextSectionDescription>
+      </div>
+      <ul className="mx-0 mt-4 list-none space-y-4">
         {certifications
           /* filter through and do not include school, as it is education and not certification.*/
           /* school should be changed to education. */

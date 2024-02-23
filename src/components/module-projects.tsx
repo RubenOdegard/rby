@@ -3,16 +3,29 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import ProjectCarousel from "./project-carousel";
+import TextSectionHeader from "./text-section-header";
+import TextSectionDescription from "./text-section-description";
 
 const ShowProjects = () => {
   return (
-    <article className="space-y-4 md:space-y-6 max-w-4xl mx-auto z-30 ">
-      <h3 className="text-lg md:text-xl lg:text-2xl">Featured Projects</h3>
-      <div className="flex max-w-4xl relative p-0 md:p-2 rounded-xl transition duration-250 border-ring/10 border bg-card/50">
-        <div className="inset-0 absolute bg-blue-950/50 blur-3xl -z-10 animate-pulse" />
-        <ProjectCarousel />
+    <article className="z-30 mx-auto  space-y-4 md:space-y-6 ">
+      <div className="pb-2">
+        <TextSectionHeader>Featured Projects</TextSectionHeader>
+
+        <TextSectionDescription className="max-w-4xl">
+          In my spare time, I work on a variety of different projects. I tend to
+          develop solutions to improve my understanding of a tool or a problem.
+        </TextSectionDescription>
       </div>
-      <div className="flex items-center justify-center z-20 gap-2">
+      <div className="absolute inset-0 -z-10 bg-background blur-3xl" />
+      {
+        /* motion-safe:animate-ping-slow
+      bg-blue-950/30 */
+      }
+
+      <ProjectCarousel />
+
+      <div className="z-20 flex items-center justify-center gap-2 pt-16 md:mt-0">
         <Link href="/projects">
           <Button
             aria-label="show all projects"

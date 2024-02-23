@@ -48,7 +48,6 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
           disableTransitionOnChange
         >
           <header className="sticky top-0 z-50 bg-background/90 md:bg-background/50 backdrop-blur-lg shadow-md ">

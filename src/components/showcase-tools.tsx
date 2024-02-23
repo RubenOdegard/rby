@@ -97,7 +97,7 @@ export default function ToolsShowcase() {
         ))}
       </div>
 
-      <div className="absolute h-32 w-[400px] bg-accent/80 blur-3xl z-20 top-0 right-1/2 translate-x-1/2" />
+      <div className="absolute h-[300px] w-[300px] bg-accent opacity-50 blur-3xl z-20 inset-0" />
     </div>
   );
 }

@@ -28,15 +28,38 @@ const ProjectCarousel = () => {
       plugins={[plugin.current]}
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
-      className="w-full max-w-4xl mx-auto p-0 md:p-2"
+      className="mx-auto w-full min-w-full p-0"
     >
       <CarouselContent>
         {projects.map((project, index) => (
           project.featured && (
             <CarouselItem key={`carousel-item-${index}`}>
-              <Card>
-                <CardContent className="flex aspect-video items-center justify-center p-4 text-white">
-                  <div className="w-full bg-cover bg-center relative">
+              <div className="flex pb-4">
+                <div className="items-left mb-3 flex w-full flex-col md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <h1 className="m-0 p-0 text-2xl text-yellow-400">
+                      {project.title}
+                    </h1>
+                    <div className="m-0 p-0 text-gray-400">
+                      {project.desc}
+                    </div>
+                  </div>
+
+                  <div className="mt-2 flex space-x-2 md:mt-0">
+                    <LivePreviewButton
+                      href={project.live}
+                      variant="outline"
+                    />
+                    <GithubLinkButton
+                      href={project.link}
+                      variant="outline"
+                    />
+                  </div>
+                </div>
+              </div>
+              <Card className="border-none">
+                <CardContent className="flex aspect-video items-center justify-center text-white">
+                  <div className="relative w-full bg-cover bg-center">
                     <Image
                       src={project.image}
                       alt={project.imagealt}
@@ -44,29 +67,8 @@ const ProjectCarousel = () => {
                       height={1080}
                       quality={50}
                       priority={true}
-                      className="w-full h-full object-cover aspect-video"
+                      className="aspect-video h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black opacity-100">
-                    </div>
-
-                    <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center  md:w-full sm:max-w-xl py-2.5 px-4  md:px-10 md:py-8 rounded-md bg-gradient-to-t from-gray-950/50 to-gray-900/30 border border-accent/10 dark:border-ring/10 shadow-md backdrop-blur-sm transition-all duration-500">
-                      <h3 className="hidden md:block text-sm md:text-lg font-bold m-0  text-white">
-                        {project.title}
-                      </h3>
-                      <p className="hidden sm:inline-block text-xs md:text-sm mt-0 opacity-90">
-                        {project.desc}
-                      </p>
-                      <div className="flex w-full gap-3 items-center justify-center  md:mt-4">
-                        <LivePreviewButton
-                          href={project.live}
-                          variant="outline"
-                        />
-                        <GithubLinkButton
-                          href={project.link}
-                          variant="outline"
-                        />
-                      </div>
-                    </div>
                   </div>
                 </CardContent>
               </Card>

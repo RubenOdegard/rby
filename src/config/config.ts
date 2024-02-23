@@ -7,10 +7,14 @@ export const siteOptions = {
   },
   developerName: "Ruben Odegard",
   developerTitle: "Full Stack Developer",
-  developerDesc: "Self-taught developer based in Oslo.",
+  developerDesc: "Oslo, Norway",
 };
 
 export const navLinks = [
+  {
+    href: "/",
+    title: "Home",
+  },
   {
     href: "/projects",
     title: "Projects",
@@ -23,6 +27,14 @@ export const navLinks = [
   {
     href: "/certifications",
     title: "Certifications",
+  },
+  {
+    href: "/resources",
+    title: "Resources",
+  },
+  {
+    href: "/workflow",
+    title: "Workflow",
   },
 ];
 

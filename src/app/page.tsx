@@ -1,46 +1,46 @@
+import { BackgroundBeamsDemo } from "@/components/background-beams-demo";
 import ModuleActivities from "@/components/module-activities";
-import ModuleBackgroundHero from "@/components/module-background-hero";
 import ModuleCertifications from "@/components/module-certifications";
-import ModuleHero from "@/components/module-hero";
 import ModuleInformation from "@/components/module-information";
 import ModuleProjects from "@/components/module-projects";
 import { cn } from "@/lib/utils";
 
-// TODO: Complete the blog project.
-// TODO: Fix mobile padding on individual pages.
-// TODO: Redo the HeroSection, need to be more "eye catching"
-
 export default function Home() {
   {/* classes used on every section */}
   const sectionClasses =
-    "w-full prose dark:prose-invert lg:prose-lg py-6 md:py-16";
+    "prose dark:prose-invert lg:prose-lg w-full px-4 py-6 md:px-16 md:py-16 lg:px-24";
   return (
-    <main className="flex min-h-screen flex-col items-center px-4 sm:px-12 lg:px-0 overflow-x-hidden relative ">
-      {/* Render background in the hero section */}
+    <main className="relative flex min-h-screen flex-col items-center overflow-x-hidden">
+      {
+        /* Render background in the hero section
+
       <ModuleBackgroundHero />
+      */
+      }
+
       {/* Main page sections */}
-      <div className="flex w-full h-full justify-center items-center flex-col space-y-16 md:space-y-32 pb-16 md:pb-32">
+      <div className="flex h-full w-full flex-col items-center justify-center space-y-16 pb-16 md:space-y-32 md:pb-32">
         <section
           className={cn(
             sectionClasses,
-            "max-w-4xl items-center pt-24 flex min-h-[60dvh] ",
+            "relative flex min-h-[90dvh] items-center justify-center pt-0 text-center md:pt-0",
           )}
         >
-          <ModuleHero />
-        </section>
-
-        <section className={cn(sectionClasses, "relative max-w-4xl")}>
-          <ModuleProjects />
+          <BackgroundBeamsDemo />
         </section>
 
         <section className={cn(sectionClasses, "max-w-4xl")}>
           <ModuleInformation />
         </section>
 
+        <section className={cn(sectionClasses, "relative w-full max-w-4xl")}>
+          <ModuleProjects />
+        </section>
+
         <section
           className={cn(
             sectionClasses,
-            "max-w-2xl ",
+            "max-w-4xl",
           )}
         >
           <ModuleActivities />
@@ -49,7 +49,7 @@ export default function Home() {
         <section
           className={cn(
             sectionClasses,
-            "max-w-2xl ",
+            "max-w-4xl ",
           )}
         >
           <ModuleCertifications />
