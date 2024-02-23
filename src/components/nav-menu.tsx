@@ -16,6 +16,8 @@ import NavLink from "./ui/nav-link";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useToast } from "./ui/use-toast";
+import { Input } from "./ui/input";
 
 const listItemVariants = {
   hidden: { opacity: 0, x: -100, y: -3 },
@@ -29,7 +31,32 @@ const listItemVariants = {
   }),
 };
 
+// Stop the sheet from closing when a non-navigating link is clicked
+function handleStopPropagation(event: React.SyntheticEvent) {
+  event.stopPropagation();
+}
+
 export default function NavMenu() {
+  const { toast } = useToast();
+  const copyToClipboard = async (event: React.SyntheticEvent) => {
+    try {
+      handleStopPropagation(event);
+      const input = document.getElementById("link") as HTMLInputElement;
+
+      if (input) {
+        await navigator.clipboard.writeText(input.value);
+        toast({
+          title: "Contact Information",
+          description: `${input.value} has been copied to your clipboard.`,
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: `${error}`,
+      });
+    }
+  };
   return (
     <Sheet>
       <SheetTrigger className="rounded-xl border px-3 py-1.5 transition-colors hover:border-yellow-500 hover:text-yellow-400">
@@ -86,14 +113,27 @@ export default function NavMenu() {
         <SheetFooter className="py-4">
           <SheetClose asChild>
             <div className="flex flex-col gap-4 pt-4 text-center">
-              <div className="mb-2 flex items-center justify-center gap-2 divide-x divide-gray-800 rounded-full border px-3 py-1 text-gray-200">
-                <span className="px-2">
-                  contact@rubenodegard.com
-                </span>
+              {/* biome-ignore lint/a11y/useKeyWithClickEvents: Prevent sheet from closing when clicking a non-navigating option */}
+              <div
+                className="mx-auto mb-2 flex items-center justify-center gap-2 divide-x divide-gray-800 rounded-full border px-3 py-1 text-gray-200"
+                onClick={copyToClipboard}
+              >
+                <Input
+                  id="link"
+                  defaultValue="contact@rubenodegard.com"
+                  className="m-0 flex  min-w-[200px] border-none p-0 text-center text-gray-500 outline-none"
+                  readOnly
+                  disabled={true}
+                />
 
                 <span>
-                  <Button variant="unstyled" size="icon" className="pl-2">
-                    <ClipboardIcon className="h-4 w-4 transition-colors hover:text-yellow-400" />
+                  <Button
+                    variant="unstyled"
+                    size="icon"
+                    className="pl-2"
+                    onClick={copyToClipboard}
+                  >
+                    <ClipboardIcon className="h-4 w-4 text-yellow-400 transition-colors hover:text-yellow-600" />
                   </Button>
                 </span>
               </div>
@@ -101,17 +141,17 @@ export default function NavMenu() {
                 <Link
                   href={siteOptions.social.github}
                   target="_blank"
-                  className="flex gap-1 text-gray-200 transition-colors hover:text-yellow-400"
+                  className="flex gap-1 text-yellow-400 decoration-1 transition-colors hover:text-yellow-600"
+                  onClick={handleStopPropagation}
                 >
-                  <Github className="fill-black text-white" />
                   <span>Github</span>
                 </Link>
                 <Link
                   href={siteOptions.social.linkedin}
                   target="_blank"
-                  className="flex gap-1.5 text-gray-200 transition-colors hover:text-yellow-400"
+                  className="flex gap-1.5 text-yellow-400 decoration-1 transition-colors hover:text-yellow-600 "
+                  onClick={handleStopPropagation}
                 >
-                  <Linkedin className="fill-blue-500 text-blue-500" />
                   <span>LinkedIn</span>
                 </Link>
               </div>
