@@ -94,8 +94,7 @@ export const certifications = [
     type: "Online Course",
     startDate: "2023/09/01",
     endDate: "2023/12/31",
-    desc:
-      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
+    desc: "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
     topics: [
       "A broad and robust understanding of computer science and programming",
       "How to think algorithmically and solve programming problems efficiently",
@@ -143,8 +142,7 @@ export const certifications = [
     type: "Online Course",
     startDate: "",
     endDate: "",
-    desc:
-      "The Odin Project is an open-source curriculum for learning web development. It provides free, high-quality resources and a supportive community for self-learners.",
+    desc: "The Odin Project is an open-source curriculum for learning web development. It provides free, high-quality resources and a supportive community for self-learners.",
     topics: [
       "HTML",
       "CSS",
@@ -179,8 +177,7 @@ export const certifications = [
     type: "Online Course",
     startDate: "",
     endDate: "",
-    desc:
-      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
+    desc: "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
 
     topics: [
       "An understanding of AWS Cloud concepts",
@@ -228,8 +225,7 @@ export const certifications = [
     type: "Online Course",
     startDate: "",
     endDate: "",
-    desc:
-      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
+    desc: "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
 
     topics: [
       "Comprehensive understanding of User Experience (UX) Design principles",
@@ -259,8 +255,7 @@ export const certifications = [
     type: "Online Course",
     startDate: "",
     endDate: "",
-    desc:
-      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
+    desc: "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
 
     topics: [
       "Understanding Google Cloud services and solutions",
@@ -289,8 +284,7 @@ export const certifications = [
     type: "Online Course",
     startDate: "",
     endDate: "",
-    desc:
-      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
+    desc: "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
 
     topics: [
       "Effective project management and leadership skills",
@@ -320,8 +314,7 @@ export const certifications = [
     type: "Online Course",
     startDate: "",
     endDate: "",
-    desc:
-      "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
+    desc: "Acquire a strong foundation in computer science, programming, and key concepts. Gain proficiency in languages like C, Python, SQL, JavaScript, CSS, and HTML.",
 
     topics: [
       "Linux installation and package management",
@@ -421,8 +414,7 @@ export const projects = [
 
   {
     title: "Spotify Web API - Client Credentials",
-    desc:
-      "Example of working with the Spotify Web API with Client Credentials.",
+    desc: "Example of working with the Spotify Web API with Client Credentials.",
     year: "2023",
     content: "",
     hidden: true,
@@ -449,9 +441,7 @@ export const projects = [
       },
       longSection: {
         title: "SEO and Accessibility",
-        text: [
-          "",
-        ],
+        text: [""],
       },
       tags: [
         "NextJS",

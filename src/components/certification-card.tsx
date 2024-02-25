@@ -12,9 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { TCertification } from "@/types/types";
 import Card from "@/components/ui/container-card";
 
-export default function CertificationCard(
-  certification: TCertification,
-) {
+export default function CertificationCard(certification: TCertification) {
   // get status from certification and convert to text
   const getStatusText = (status: number) => {
     switch (status) {
@@ -69,7 +67,7 @@ export default function CertificationCard(
 
             <Accordion type="single" className="pt-3" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger className="p-0 text-muted-foreground">
+                <AccordionTrigger className="p-0 text-yellow-400">
                   Read more
                 </AccordionTrigger>
                 <AccordionContent className="space-y-4">
@@ -88,7 +86,10 @@ export default function CertificationCard(
                   <div className="mx-2 flex flex-wrap gap-2">
                     {certification.tags.map((i) => {
                       return (
-                        <Badge key={i} className="bg-primary">
+                        <Badge
+                          key={i}
+                          className="bg-yellow-400 text-yellow-950 hover:bg-yellow-300"
+                        >
                           {i}
                         </Badge>
                       );
@@ -111,29 +112,25 @@ export default function CertificationCard(
                         <MoveUpRightIcon className="ml-1 h-3 w-3 transition-all group-hover:ml-2 group-hover:rotate-45" />
                       </Link>
                     </Button>
-                    {certification.status === 0
-                      ? (
-                        <Button
-                          aria-label="certification"
-                          data-umami-event={`open certification-${certification.title}`}
-                          asChild
-                          size="sm"
-                          variant="outline"
-                          className="mb-0 w-1/2 text-yellow-400"
+                    {certification.status === 0 ? (
+                      <Button
+                        aria-label="certification"
+                        data-umami-event={`open certification-${certification.title}`}
+                        asChild
+                        size="sm"
+                        variant="outline"
+                        className="mb-0 w-1/2 text-yellow-400"
+                      >
+                        <Link
+                          href={!certification.cert ? "/" : certification.cert}
+                          target="_blank"
+                          className="group no-underline"
                         >
-                          <Link
-                            href={!certification.cert
-                              ? "/"
-                              : certification.cert}
-                            target="_blank"
-                            className="group no-underline"
-                          >
-                            Certification
-                            <MoveUpRightIcon className="ml-1 h-3 w-3 transition-all group-hover:ml-2 group-hover:rotate-45" />
-                          </Link>
-                        </Button>
-                      )
-                      : null}
+                          Certification
+                          <MoveUpRightIcon className="ml-1 h-3 w-3 transition-all group-hover:ml-2 group-hover:rotate-45" />
+                        </Link>
+                      </Button>
+                    ) : null}
                   </span>
                 </AccordionContent>
               </AccordionItem>
@@ -151,21 +148,23 @@ export type TCertProgress = {
   getStatusText: (status: number) => string;
 };
 
-export function CertProgress(
-  { status, getStatusColor, getStatusText }: TCertProgress,
-) {
+export function CertProgress({
+  status,
+  getStatusColor,
+  getStatusText,
+}: TCertProgress) {
   return (
     <div>
       <span className="pointer-events-none absolute -top-7 right-1/2 flex translate-x-1/2 items-center gap-1.5 rounded-md border border-border bg-primary-foreground  px-2 py-0.5  font-sans text-xs text-foreground transition-all duration-150 sm:relative sm:-top-7 md:-top-9">
         <span
-          className={`flex h-3 w-3 relative rounded-full z-20 ${
-            getStatusColor(status)
-          }`}
+          className={`relative z-20 flex h-3 w-3 rounded-full ${getStatusColor(
+            status,
+          )}`}
         >
           <span
-            className={`absolute overflow-clip inset-0 z-10 h-2 w-2 blur-md rounded-full ${
-              getStatusColor(status)
-            }`}
+            className={`absolute inset-0 z-10 h-2 w-2 overflow-clip rounded-full blur-md ${getStatusColor(
+              status,
+            )}`}
           />
         </span>
         {getStatusText(status)}

@@ -1,31 +1,40 @@
-import { siteOptions } from "@/config/config";
-import { MapPin } from "lucide-react";
+import { BackgroundGradientAnimation } from "./bg-background-animations";
+import HeroDescriptionText from "./hero-description-text";
+import HeroDescriptionAuthor from "./hero-description-author";
+import ScrollHideIcon from "./scroll-hide-icon";
 
 const ModuleHero = () => {
   return (
-    <div className="flex w-full flex-col items-center">
-      <div className="relative">
-        <div className="text-left">
-          <h1 className="text-4xl font-extralight leading-tight text-white md:text-6xl lg:text-9xl">
-            Web Development
-          </h1>
+    <div className="relative -top-16 flex flex-col items-center justify-center  antialiased">
+      <BackgroundGradientAnimation interactive={false} className=" z-10">
+        <div className="absolute left-1/2 top-1/2 z-40 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center px-4 lg:px-0">
+          <div className="w-full max-w-7xl">
+            <div className="flex w-full flex-col items-center">
+              <div className="relative">
+                <div className="text-left">
+                  <h1 className="text-4xl font-extralight leading-tight text-white md:text-6xl lg:text-9xl">
+                    <span className="text-yellow-400">Web</span> Development
+                  </h1>
 
-          <h1 className="text-4xl font-extralight leading-tight text-white md:text-6xl lg:text-9xl">
-            <span className="text-yellow-400">UX/UI</span> Design
-          </h1>
-        </div>
-        <div className="absolute -bottom-32 right-0 z-50 flex flex-col items-end justify-end gap-1 rounded-xl rounded-br-none border border-gray-900/80 bg-gray-950/5 p-4 drop-shadow-lg backdrop-blur-sm">
-          <h2 className="m-0 border-none p-0 text-xs font-extralight leading-tight text-white md:text-base">
-            Self-taught <span className="text-yellow-400">developer</span>{" "}
-            with an interest for{" "}
-            <span className="text-yellow-400">design.</span>
-          </h2>
-          <div className="flex items-center justify-center gap-1 text-sm font-extralight text-gray-500">
-            <MapPin className=" w-3" />
-            {siteOptions.developerDesc}
+                  <h1 className="text-4xl font-extralight leading-tight text-white md:text-6xl lg:text-9xl">
+                    <span className="text-yellow-400">UX/UI</span> Design
+                  </h1>
+                </div>
+                <div className="relative z-50 mt-6 rounded-xl text-left lg:absolute lg:-bottom-32 lg:right-0 lg:mt-0 lg:flex lg:items-end lg:justify-end">
+                  <div className="flex flex-col lg:text-right">
+                    <HeroDescriptionText words="Self-taught developer with an interest for design." />
+                    <HeroDescriptionAuthor words="Ruben Odegard" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
+        <div className="absolute bottom-24 left-1/2 translate-x-1/2 animate-bounce">
+          <ScrollHideIcon />
+        </div>
+      </BackgroundGradientAnimation>
     </div>
   );
 };

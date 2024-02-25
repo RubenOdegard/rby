@@ -38,17 +38,14 @@ export default function ActivityCard(activity: TActivity) {
                   {activity.title}
                 </span>
               </div>
-              <div className="inline-block h-0.5 bg-primary-foreground md:hidden">
-              </div>
+              <div className="inline-block h-0.5 bg-primary-foreground md:hidden"></div>
               <time className="ml-[1px] mt-0.5 flex flex-row-reverse items-center justify-end gap-2 py-0.5 text-xs font-normal leading-5 text-foreground/90 transition-all  duration-150 md:mt-0 md:flex-row md:pl-0 md:text-sm">
                 <div className="">
                   {formatMonthYear(activity.startDate)}
                   {" " + "-" + " "}
                   {formatMonthYear(activity.endDate)}
                 </div>
-                <div className="text-foreground/90">
-                  {calendarIcon}
-                </div>
+                <div className="text-foreground/90">{calendarIcon}</div>
               </time>
             </div>
             <span className="flex items-center gap-1 text-xs text-foreground/90 md:text-sm">

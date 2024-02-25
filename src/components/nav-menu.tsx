@@ -71,7 +71,7 @@ export default function NavMenu() {
             </div>
             <div className="flex flex-col items-center justify-center gap-1">
               <span className="font-extralight text-gray-300">
-                Software Developer
+                Web Developer & UX/UI Designer
               </span>
             </div>
           </SheetTitle>
@@ -97,11 +97,7 @@ export default function NavMenu() {
                         variant="unstyled"
                         className="m-0 p-0"
                       >
-                        <NavLink
-                          href={link.href}
-                        >
-                          {link.title}
-                        </NavLink>
+                        <NavLink href={link.href}>{link.title}</NavLink>
                       </Button>
                     </SheetClose>
                   </motion.li>

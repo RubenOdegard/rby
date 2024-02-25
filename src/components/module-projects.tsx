@@ -8,20 +8,20 @@ import TextSectionDescription from "./text-section-description";
 
 const ShowProjects = () => {
   return (
-    <article className="z-30 mx-auto  space-y-4 md:space-y-6 ">
+    <article className="z-30 mx-auto space-y-2">
       <div className="pb-2">
-        <TextSectionHeader>Featured Projects</TextSectionHeader>
+        <TextSectionHeader className="text-yellow-50">
+          Featured Projects
+        </TextSectionHeader>
 
         <TextSectionDescription className="max-w-4xl">
-          In my spare time, I work on a variety of different projects. I tend to
-          develop solutions to improve my understanding of a tool or a problem.
+          In my spare time, I work on a variety of different projects. I like to
+          create projects to improve my understanding of a tool or a problem.
         </TextSectionDescription>
       </div>
       <div className="absolute inset-0 -z-10 bg-background blur-3xl" />
-      {
-        /* motion-safe:animate-ping-slow
-      bg-blue-950/30 */
-      }
+      {/* motion-safe:animate-ping-slow
+      bg-blue-950/30 */}
 
       <ProjectCarousel />
 
